@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+  <title>SDSS-III Press Releases</title>
+  <link>http://www.sdss3.org/press/</link>
+  <description>The latest astronomy news from the Sloan Digital Sky Survey</description>
+  <atom:link href="http://www.sdss3.org/press/feed.xml" rel="self" type="application/rss+xml" />
+  <category>Astronomy</category>
+  <copyright>SDSS-III</copyright>
+  <image>
+    <url>http://www.sdss3.org/images/logo_sm.jpg</url>
+    <title>SDSS-III Press Releases</title>
+    <link>http://www.sdss3.org/press/</link>
+  </image>
+  <language>en-us</language>
+
+  <item>
+     <title>Stars in Our Galaxy Move Far from Home</title>
+     <link>http://www.sdss3.org/press/20150730.farfromhome.php</link>
+     <description>Scientists with the Sloan Digital Sky Survey (SDSS) have 
+	 created a new map of the Milky Way and determined that 30 percent of 
+	 stars have dramatically changed their orbits.</description>
+     <pubDate>Thurs, 30 July 2015 10:15:00 EDT</pubDate>
+     <guid>http://www.sdss3.org/press/20150730.farfromhome.php</guid>
+  </item>  
+
+  <item>
+     <title>Astronomers from the Sloan Digital Sky Survey Make the Most Precise Measurement 
+	 Yet of the Expanding Universe</title>
+     <link>http://www.sdss3.org/press/precise.php</link>
+     <description>Astronomers from the Sloan Digital Sky Survey have used 140,000 
+	 distant quasars to measure the expansion rate of the Universe when it was only 
+	 one-quarter of its present age. This is the best measurement yet of the expansion 
+	 rate at any epoch in the last 13 billion years.</description>
+     <pubDate>Mon, 7 April 2014 13:00:00 EDT</pubDate>
+     <guid>http://www.sdss3.org/press/precise.php</guid>
+  </item>  
+  <item>
+     <title>A One-Percent Measure of the Universe</title>
+     <link>http://www.sdss3.org/press/onepercent.php</link>
+     <description>Researchers from the Baryon Oscillation Spectroscopic 
+	 Survey (BOSS) today announced that they have measured the distances 
+	 to galaxies more than six billion light-years away to an 
+	 unprecedented accuracy of just one percent. Their measurements 
+	 place new constraints on the properties of the mysterious 
+	 "dark energy" thought to permeate empty space, which causes the 
+	 expansion of the Universe to accelerate.</description>
+     <pubDate>Wed, 8 January 2014 14:15:00 EST</pubDate>
+     <guid>http://www.sdss3.org/press/onepercent.php</guid>
+  </item>
+  <item>
+     <title>This is Your Galaxy: New data help astronomers 
+		explore the hidden Milky Way</title>
+     <link>http://www.sdss3.org/press/dr10.php</link>
+     <description>Today, astronomers with the Sloan Digital Sky Survey III (SDSS-III) 
+	 released a new online public data set featuring 60,000 stars that are helping to tell 
+	 the story of how our Milky Way galaxy formed. The highlight of today's "Data Release 10" 
+	 is a new set of high-resolution stellar spectra - measurements of the amount of light 
+	 given off by a star at each wavelength - using infrared light, invisible to human 
+	 eyes but able to penetrate the veil of dust that obscures the center of the Galaxy.
+	 </description>
+     <pubDate>Wed, 31 July 2013 00:01:00 EST</pubDate>
+     <guid>http://www.sdss3.org/press/dr10.php</guid>
+  </item>
+  <item>
+     <title>So These Stars Orbit in a Bar...</title>
+     <link>http://www.sdss3.org/press/milkywaybar.php</link>
+     <description>Forget the restaurant at the end of the Universe — astronomers now have 
+	 the clearest picture yet of the bar at the center of the Milky Way. 
+	 Scientists with the Sloan Digital Sky Survey III (SDSS-III) have announced the 
+	 discovery of hundreds of stars rapidly moving together in long, looping orbits around 
+	 the center of our Galaxy. "The best explanation for their orbits is that these stars 
+	 are part of the Milky Way bar," says David Nidever, a Dean B. McLaughin Fellow in 
+	 the Astronomy Department at the University of Michigan. "Studying the bar is a key 
+	 piece of the puzzle to understanding the whole galaxy, even out here in the 
+	 spiral arms.</description>
+     <pubDate>Wed, 19 Dec 2012 00:01:00 EST</pubDate>
+     <guid>http://www.sdss3.org/press/milkywaybar.php</guid>
+  </item>
+  <item>
+     <title>The Great Space Coaster: Astronomers Measure the Universe's
+Deceleration before Dark Energy Took Over</title>
+     <link>http://www.sdss3.org/press/lyabao.php</link>
+     <description>For the past five billion years, the expansion of the Universe has been speeding up, powered by the mysterious repulsive force known as "dark energy." But thanks to a new technique for measuring the three-dimensional structure of the distant Universe, astronomers from the Sloan Digital Sky Survey (SDSS-III) have made the first measurement of the cosmic expansion rate just three billion years after the Big Bang.</description>
+     <pubDate>Tue, 13 Nov 2012 05:00:00 EST</pubDate>
+     <guid>http://www.sdss3.org/press/lyabao.php</guid>
+  </item>
+  <item>
+     <title>Gone, with the Wind</title>
+     <link>http://www.sdss3.org/press/thewind.php</link>
+     <description>The case of the missing quasar gas clouds has been solved by a worldwide team of astronomers, and the answer is blowin' in the wind. Astronomers Nurten Filiz Ak and Niel Brandt of the Pennsylvania State University led the team, which announced their results in a paper published in today's issue of The Astrophysical Journal. The paper describes 19 distant quasars in which giant clouds of gas seemed to disappear in just a few years.</description>
+     <pubDate>Mon, 1 Oct 2012 06:00:00 EDT</pubDate>
+     <guid>http://www.sdss3.org/press/thewind.php</guid>
+  </item>
+  <item>
+     <title>New 3-D Map of Massive Galaxies and Distant Black Holes Offers Clues to Dark Matter and Dark Energy</title>
+     <link>http://www.sdss3.org/press/dr9.php</link>
+     <description>The Sloan Digital Sky Survey III (SDSS-III) has released the largest-ever three-dimensional map of massive galaxies and distant black holes, which will help astronomers explain the mysterious "dark matter" and "dark energy" that scientists know makes up 96 percent of the universe.</description>
+     <pubDate>Wed, 8 Aug 2012 08:00:00 EDT</pubDate>
+     <guid>http://www.sdss3.org/press/dr9.php</guid>
+  </item>
+  <item>
+     <title>When Dark Energy Turned On</title>
+     <link>http://www.sdss3.org/press/20120330.bspec.php</link>
+     <description>The Sloan Digital Sky Survey (SDSS-III) today announced the most accurate measurements yet of the distances to galaxies in the faraway universe, giving an unprecedented look at the time when the universe first began to expand at an ever-increasing rate.</description>
+     <pubDate>Fri, 30 Mar 2012 05:00:00 EDT</pubDate>
+     <guid>http://www.sdss3.org/press/20120330.bspec.php</guid>
+  </item>
+  <item>
+     <title>Two Heads Are Better Than One</title>
+     <link>http://www.sdss3.org/press/20120319.ksz.php</link>
+     <description>In 1972, a young astronomer predicted that moving clusters of galaxies would leave a subtle imprint on the cosmic microwave background radiation - but he had no way to check his prediction. Forty years later, another young astronomer has proved him right - by combining data from two huge international astronomy collaborations. </description>
+     <pubDate>Tue, 20 Mar 2012 10:42:15 EST</pubDate>
+     <guid>http://www.sdss3.org/press/20120319.ksz.php</guid>
+  </item>
+  <item>
+     <title>Fireworks</title>
+     <link>http://www.sdss3.org/press/20120227.fireworks.php</link>
+     <description>A little luck and a lot of hard work can really light up the sky. Taking advantage of a little-known feature of the Sloan Digital Sky Survey, a team of astronomers led by Carles Badenes of the University of Pittsburgh has helped to clarify the origins of an important type of exploding star—using nothing but a few thousand small, faint stars in our own cosmic backyard.</description>
+     <pubDate>Mon, 27 Feb 2012 06:00:00 EST</pubDate>
+     <guid>http://www.sdss3.org/press/20120227.fireworks.php</guid>
+  </item>
+  <item>
+     <title>The Sloan Guide to the Universe</title>
+     <link>http://www.sdss3.org/press/20120111.sloanguide.php</link>
+     <description>When you really want to see a place, sometimes a map just isn't enough. Today, SDSS scientists announced results that, taken together, interpret this map to retrace the history of the universe over the last six billion years.</description>
+     <pubDate>Thu, 12 Jan 2012 14:00:00 CST</pubDate>
+     <guid>http://www.sdss3.org/press/20120111.sloanguide.php</guid>
+  </item>
+  <item>
+     <title>New Instrument Peers Through the Heart of the Milky Way</title>
+     <link>http://www.sdss3.org/press/20120109.galaxy.php</link>
+     <description>Astronomy has a powerful new tool to probe the structure of our galaxy. The Apache Point Observatory Galactic Evolution Experiment (APOGEE) spectrograph is the newest instrument deployed by the Sloan Digital Sky Survey III (SDSS-III). SDSS scientists presented the revolutionary capabilities of this high-resolution infrared at a meeting today.</description>
+     <pubDate>Mon, 9 Jan 2012 11:45:00 CST</pubDate>
+     <guid>http://www.sdss3.org/press/20120109.galaxy.php</guid>
+  </item>
+  <item>
+     <title>Not All Who Wander Are Lost</title>
+     <link>http://www.sdss3.org/press/20120109.wander.php</link>
+     <description>Some stars have orbits that take them to interesting places, and they have interesting stories to tell about how they were formed. At today's meeting of the American Astronomical Society, astronomers Judy Cheng and and Connie Rockosi (University of California, Santa Cruz) presented new evidence that will help answer long-standing questions about the history of disk of our galaxy.</description>
+     <pubDate>Mon, 9 Jan 2012 11:45:00 CST</pubDate>
+     <guid>http://www.sdss3.org/press/20120109.wander.php</guid>
+  </item>
+  <item>
+     <title>A Beast with Four Tails</title>
+     <link>http://www.sdss3.org/press/20111130.fourtails.php</link>
+     <description>The Milky Way galaxy continues to devour its small neighboring dwarf galaxies and the evidence is spread out across the sky.</description>
+     <pubDate>Thu, 1 Dec 2011 14:00:00 EST</pubDate>
+     <guid>http://www.sdss3.org/press/20111130.fourtails.php</guid>
+  </item>
+  <item>
+     <title>These Little Lights of Mine: 14,000 quasars shine a light on the distant universe</title>
+     <link>http://www.sdss3.org/press/20110501.littlelight.php</link>
+     <description>Scientists from the Sloan Digital Sky Survey (SDSS-III) have created the largest ever three-dimensional map of the distant universe by using the light of the brightest objects in the cosmos to illuminate ghostly clouds of intergalactic hydrogen. The map provides an unprecedented view of what the universe looked like 11 billion years ago.</description>
+     <pubDate>Sun, 1 May 2011 10:00:00 PDT</pubDate>
+     <guid>http://www.sdss3.org/press/20110501.littlelight.php</guid>
+  </item>
+  <item>
+     <title>Astronomers Release the Largest Color Image of the Sky Ever Made</title>
+     <link>http://www.sdss3.org/press/20110111.largestimage.php</link>
+     <description>Today, the Sloan Digital Sky Survey-III (SDSS-III) is releasing the largest digital color image of the sky ever made, and it's free to all. The image has been put together over the last decade from millions of 2.8-megapixel images, thus creating a color image of more than a trillion pixels. This terapixel image is so big and detailed that one would need 500,000 high-definition TVs to view it at its full resolution.</description>
+     <pubDate>Tue, 11 Jan 2011 10:30:00 PST</pubDate>
+     <guid>http://www.sdss3.org/press/20110111.largestimage.php</guid>
+  </item>
+  <item>
+     <title>A New Search for Dark Energy Begins</title>
+     <link>http://www.sdss3.org/press/20101001.bossfirstlight.php</link>
+     <description>The most ambitious attempt yet to trace the history of the universe has seen "first light." The Baryon Oscillation Spectroscopic Survey (BOSS), a part of the Sloan Digital Sky Survey III (SDSS-III), took its first astronomical data on the night of September 14-15 after years of preparations. That night, astronomers used the Sloan Foundation 2.5-meter telescope at Apache Point Observatory in New Mexico to measure the spectra of a thousand galaxies and quasars, thus starting a quest to eventually collect spectra for 1.4 million galaxies and 160,000 quasars by 2014.</description>
+     <pubDate>Thu, 1 Oct 2009 08:00:00 EDT</pubDate>
+     <guid>http://www.sdss3.org/press/20101001.bossfirstlight.php</guid>
+  </item>
+</channel>
+</rss>

@@ -1,0 +1,220 @@
+
+<h3 id="countstomag">How to go from Counts in the fpC file to Calibrated
+<var>ugriz</var> magnitudes?</H3>
+
+<p>First, note that all SDSS images (&quot;corrected frames&quot;,
+<code>fpC*.fit</code> files) have a "soft bias" of 1000 data numbers
+(DN) added so they can be stored as unsigned integer. Secondly, since DR1,
+the sky has not been subtracted from the corrected frames, but is
+stored in the header keyword <code>sky</code> in units of DN. The
+<code>tsObj*.fit</code> and related tables and the CAS database store
+sky values as surface brightness (maggies/sq. arcsec., where one
+maggie corresponds to 0 magnitudes/sq. arcsec).</p>
+
+<h4>Asinh and Pogson magnitudes</h4>
+
+<p>All calibrated magnitudes in the <a
+href="dr8/imaging/catalogs.php">photometric catalogs</a> are
+given not as conventional <a
+href="dr8/glossary/php#mag_pogson">Pogson</a> astronomical
+magnitudes, but as <a href="dr8/algorithms/magnitudes.php#asinh">asinh
+magnitudes</a>. We show how to obtain both kinds of magnitudes from
+observed count rates from the SDSS images and vice versa.</p>
+
+<p>See further down for <a
+href="dr8/algorithms/fluxcal.php#SDSStoflux">conversion of SDSS magnitudes to physical fluxes</a>.
+For both kinds of magnitudes, there are two ways to obtain the
+zeropoint information for the conversion.</p>
+
+<ol>
+
+  <li><H4>A little slower, but gives the final calibration and works
+      for all data releases</H4>
+
+      <p>Here you first need the following information from the tsField
+      files:</p>
+         <pre>
+               aa = zeropoint
+               kk = extinction coefficient
+        and    airmass
+          </pre>
+
+      <p>To get a calibrated magnitude, you first need to determine the
+      extinction-corrected ratio of the observed count rate to the
+      zero-point count rate:</p>
+      <ul>
+    <li>Convert the observed
+        number of counts to a count rate using the exposure time <code>exptime
+        = 53.907456 sec</code>,</li>
+
+    <li>correct counts for atmospheric extinction using the
+        extinction coefficient <code>kk</code> and the
+        <code>airmass</code>, and </li>
+    <li>divide by the zero-point count rate, which is given by
+        <code>f<sub>0</sub> = 10<sup>-0.4*aa</sup></code> counts/second
+        <strong>both for asinh and conventional
+        magnitudes</strong>.</li>
+
+      </ul>
+      <dl>
+    <dt>In a single step,</dt>
+    <dd><code>f/f<sub>0</sub> = counts/exptime * 10<sup>0.4*(aa + kk *
+        airmass)</sup></code>
+     </dd>
+      </dl>
+
+      <p>Then, calculate either the conventional ("Pogson") or the SDSS
+      asinh magnitude from <code>f/f<sub>0</sub></code>:</p>
+      <dl>
+    <dt><strong>Pogson</strong></dt>
+    <dd><code>mag = -2.5 * log10(f/f<sub>0</sub>)</code><br />
+
+        <code>error(mag) = 2.5 / ln(10) * error(counts) /
+        counts</code><br />
+        To get the error on the counts, see the <a href="dr8/algorithms/fluxcal.php#counterr">note on computing count
+        errors</a> below.</dd>
+    <dt><strong>asinh</strong></dt>
+    <dd><code>mag =
+        -(2.5/ln(10))*[asinh((f/f<sub>0</sub>)/2b)+ln(b)]</code><br />
+
+        <code>error(mag) = 2.5 / ln(10) * error(counts)/exptime *
+        1/2b * <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10<sup>0.4*(aa + kk *
+        airmass)</sup> / sqrt(1 + [(f/f<sub>0</sub>)/2b]<sup>2</sup>)</code>,<br />
+        where <code>b</code> is the <em>softening parameter</em>
+        for the photometric band in question and is given in the
+        <a href="dr8/algorithms/fluxcal.php#asinh_table">table of b
+        coefficients</a> below (for details on the asinh
+        magnitudes, see the paper by <a
+        href="http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1999AJ....118.1406L">Lupton,
+        Gunn, and Szalay 1999 [AJ 118, 1406]</a>).</dd>
+
+      </dl>
+
+
+<br>
+<center>
+      <A NAME="asinh_table"></A>
+
+     <table border="1" style="color:silver;">
+     <thead style="color:yellow;" align="center">
+      <tr><td>Band</td><td><i>b (maggies)</i></td><td>Zero-flux magnitude[<I>m</I>(<I>f</I>/<I>f</I><SUB>0</SUB> = 0)]</td><td> <I>m</I>(<I>f</I>/<I>f</I><SUB>0</SUB> = 10<I>b</I>)</td></tr>
+    <caption style="color:red;">asinh Softening Parameters (<var>b</var> coefficients)</caption>
+     </thead>
+    <TBODY>
+
+    <TR><TD align="left" valign="top"><I>u</I> </TD><TD align="center" valign="top">1.4 &#215; 10<SUP>-10</SUP></TD><TD align="center" valign="top">24.63</TD><TD align="center" valign="top">22.12</TD></TR>
+    <TR><TD align="left" valign="top"><I>g</I> </TD><TD align="center" valign="top">0.9 &#215; 10<SUP>-10</SUP></TD><TD align="center" valign="top">25.11</TD><TD align="center" valign="top">22.60</TD></TR>
+
+    <TR><TD align="left" valign="top"><I>r</I> </TD><TD align="center" valign="top">1.2 &#215; 10<SUP>-10</SUP></TD><TD align="center" valign="top">24.80</TD><TD align="center" valign="top">22.29</TD></TR>
+    <TR><TD align="left" valign="top"><I>i</I> </TD><TD align="center" valign="top">1.8 &#215; 10<SUP>-10</SUP></TD><TD align="center" valign="top">24.36</TD><TD align="center" valign="top">21.85</TD></TR>
+
+    <TR><TD align="left" valign="top"><I>z</I> </TD><TD align="center" valign="top">7.4 &#215; 10<SUP>-10</SUP></TD><TD align="center" valign="top">22.83</TD><TD align="center" valign="top">20.32</TD></TR>
+    </TBODY>
+      </TABLE>
+
+</center>
+<br>
+
+    <P><strong>Note</strong>: These values of the softening
+    parameter <I>b</I> are set to be approximately 1-sigma of the sky
+    noise; thus, only low signal-to-noise ratio measurements are affected
+    by the difference between asinh and Pogson magnitudes. The final
+    column gives the asinh magnitude associated with an object for which
+    <I>f</I>/<I>f</I><SUB>0</SUB> = 10<I>b</I>; the difference between
+    Pogson and asinh magnitudes is less than 1% for objects brighter than
+    this.</p>
+
+
+    <p>The calibrated asinh magnitudes are given in the <code>tsObj</code>
+    files. To obtain counts from an asinh magnitude, you first need to
+    work out <code>f/f<sub>0</sub></code> by inverting the asinh
+    relation above. You can then determine the number of counts from
+    <code>f/f<sub>0</sub></code> using the zero-point, extinction
+    coefficient, airmass, and exposure time.</p>
+
+      <p>The equations above are exact for DR1 and later
+    releases. Strictly speaking, for EDR photometry, the corrected counts
+    should include a color term <code>cc*(color-color0)*(X-X0)</code> (cf.
+      equation 15 in section 4.5 in the EDR paper), but it turns out
+      that generally, cc*(color-color0)*(X-X0) < 0.01 mag and the
+      color term can be neglected. Hence the calibration looks
+      identical for EDR and DR1.</p>
+  </li>
+  <li><H4>Faster magnitudes via "flux20"</H4>
+
+      <p>The "flux20" keyword in the header of the corrected frames
+      (fpC files) approximately gives the net number of
+      counts for a 20th mag object.  So instead of using the zeropoint
+      and airmass correction term from the <code>tsField</code> file,
+      you can determine the corrected zero-point flux as</p>
+
+      <dl>
+    <dd><code>f/f<sub>0</sub> = counts/(10<sup>8</sup> * flux20)</code></dd>
+      </dl>
+      <p>Then proceed with the calculation of a magnitude from
+      <code>f/f<sub>0</sub></code> as above.</p>
+
+      <p>The relation is only approximate because the final calibration
+      information (provided by nfcalib) is not available at the
+      time the corrected frames are generated.  We expect the error
+      here (compared to the final calibrated magnitude) to be of order
+      0.1 mag or so, as estimated from a couple of test cases we have
+      tried out.</p>
+
+
+      Note the counts measured by photo for each object are given
+      in the fpObjc files, as e.g., "psfcounts", "petrocounts", etc.
+
+  </li>
+</ol>
+
+<p>On a related note, <strong>in DR1</strong> one can also use relations
+similar to the above to estimate the sky level in magnitudes per
+sq. arcsec (1 pixel = 0.396 arcsec).  Either use the header keyword
+"sky" in the fpC files, or remember to first subtract "softbias" (=
+1000) from the raw background counts in the fpC files.  Note the sky
+level is also given in the tsField files. <strong>This note only
+applies to the DR1 and later data releases. Note also that the calibrated
+sky brightnesses reported in the <code>tsField</code> values have been
+corrected for atmospheric extinction</strong>.</p>
+
+
+<h4 id="counterr">Computing errors on counts (converting counts to photo-electrons)</h4>
+
+<p>The <code>fpC</code> (corrected frames) and <code>fpObjc</code>
+(object tables with counts for each object instead of magnitudes)
+files report counts (or &quot;data numbers&quot;, DN). However, it is
+the number of photo-electrons which is really counted by the CCD
+detectors and which therefore obeys Poisson statistics. The number of
+photo-electrons is related to the number of counts through the gain
+(which is really an inverse gain):</p>
+<pre>
+photo-electrons = counts * gain
+</pre>
+<p>The gain is reported in the headers of the <code>tsField</code> and
+<code>fpAtlas</code> files (and hence also in the <code>field</code>
+table in the CAS).  The total noise contributed by dark current and
+read noise (in units of DN<sup>2</sup>) is also reported in the
+<code>tsField</code> files in header keyword
+<code>dark_variance</code> (and correspondingly as
+
+<code>darkVariance</code> in the <code>field</code> table in the CAS),
+and also as <code>dark_var</code> in the <code>fpAtlas</code>
+header.</p>
+
+<p>Thus, the error in DN is given by the following expression:</p>
+<pre>
+error(counts) = sqrt([counts+sky]/gain + Npix*(dark_variance+skyErr)),
+</pre>
+<p>where <code>counts</code> is the number of object counts,
+<code>sky</code> is the number of sky counts <em>summed over the same
+area as the object counts</em>, <code>Npix</code> is the area covered
+by the object in pixels, <code>gain</code> and
+
+<code>dark_variance</code> and <code>skyErr</code> are the gain, dark
+variance, and the error on the estimate of the average sky level in
+the frame, respectively, from the corresponding <code>tsField</code>
+file.</p>
+
+

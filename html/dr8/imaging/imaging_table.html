@@ -1,0 +1,99 @@
+<table class="common">
+<tr>
+<th style="width:320px;">SAS location</th>
+<th style="width:130px;">CAS table</th>
+<th style="width:300px;">Description</th>
+</tr>
+
+<tr>
+<td>photoRunAll-dr8.fits<br />
+<span class="ismall">(in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/photoObj">BOSS_PHOTOOBJ</a>;
+see  <a
+    href="http://data.sdss3.org/datamodel/files/BOSS_PHOTOOBJ/photoRunAll.html">datamodel</a>)</span>
+</td>
+<td>Run</td>
+<td>Metadata for each imaging <a
+href="dr8/glossary.php#run">run</a>
+(one file, each around 2 Mb)</td>
+</tr>
+
+<tr>
+<td>photoField-RUN-CAMCOL.fits<br />
+<span class="ismall">(in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/photoObj">BOSS_PHOTOOBJ</a>;
+see  <a
+    href="http://data.sdss3.org/datamodel/files/BOSS_PHOTOOBJ/RERUN/RUN/photoField.html">datamodel</a>)</span>
+</td>
+<td>Field</td>
+<td>Metadata for each imaging field in a <a
+href="dr8/glossary.php#camcol">camcol</a>
+(4,590 files total, each around 1.5Mb)</td>
+</tr>
+
+
+<tr>
+<td>photoObj-RUN-CAMCOL-FIELD.fits<br />
+<span class="ismall">(in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/photoObj">BOSS_PHOTOOBJ</a>;
+see  <a
+    href="http://data.sdss3.org/datamodel/files/BOSS_PHOTOOBJ/RERUN/RUN/CAMCOL/photoObj.html">datamodel</a>)</span>
+</td>
+<td>photoPrimary<br />(only primaries)</td>
+<td>Photometric parameters for objects in each imaging <a
+href="dr8/glossary.php#field">field</a>. (around
+938,000 files total, each around 3.5Mb)</td>
+</tr>
+
+<tr>
+<td>calibObj-RUN-CAMCOL-TYPE.fits.gz<br />
+<span class="ismall">(in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/sweeps/dr8_final">PHOTO_SWEEP</a>;
+see  <a
+    href="http://data.sdss3.org/datamodel/files/PHOTO_SWEEP/RERUN/calibObj.html">datamodel</a>)</span>
+</td>
+<td></td>
+<td>"Sweep" data for each imaging <a
+href="dr8/glossary.php#camcol">camcol</a>
+(4590 files total, one for each run, each around 70Mb)</td>
+</tr>
+
+<tr>
+<td>photoEXT-RUN-CAMCOL.fits<br />
+<span class="ismall">(in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/photoObj/external">BOSS_PHOTOOBJ/external</a>;
+see  <a
+    href="http://data.sdss3.org/datamodel/files/BOSS_PHOTOOBJ/external">datamodels</a>)</span>
+</td>
+<td>TWOMASS, TWOMASSXSC, USNO, First, RC3, ROSAT, properMotions</td>
+<td>External catalog matches and ancillary information for each
+camcol. Only lists SDSS objects that match.  Field-by-field
+version in subdirectories.</td>
+</tr>
+
+<tr>
+<td>frame-BAND-RUN-CAMCOL-FIELD.fits.bz2<br />
+<span class="ismall">(in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/photoObj/frames">BOSS_PHOTOOBJ/frames</a>;
+see  <a
+    href="http://data.sdss3.org/datamodel/files/BOSS_PHOTOOBJ/frames/RERUN/RUN/CAMCOL/frame.html">datamodel</a>)</span>
+</td>
+<td></td>
+<td>Calibrated, sky-subtracted corrected frames (SDSS-III format)</td>
+</tr>
+
+<tr>
+<td>Resolve information<br />
+<span class="ismall">(in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/resolve/2010-05-23">PHOTO_RESOLVE</a>;
+see  <a
+    href="http://data.sdss3.org/datamodel/files/PHOTO_RESOLVE">datamodel</a>)</span>
+</td>
+<td></td>
+<td>Information about the SDSS window function, including a list of all
+fields in <a
+href="http://data.sdss3.org/sas/dr8/groups/boss/resolve/2010-05-23/window_flist.fits">window_flist.fits</a>
+(336 Mb)</td>
+</tr>
+
+</table>

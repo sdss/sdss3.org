@@ -1,0 +1,604 @@
+@charset "utf-8";
+/* CSS Document */
+/* General styles common to all pages */
+html {
+    /* This forces all pages to have a scroll bar, even if they are short. */
+    overflow-y: scroll;
+}
+
+a {
+    color: #0099FF;
+    text-decoration: none;
+}
+
+/* brighter color for visited links */
+a:visited {
+    color: #CC66FF;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #0099FF;
+    text-decoration: underline;
+}
+
+pre {
+    color: white;
+    overflow: auto;
+}
+
+ul {
+    list-style: circle;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    line-height: 1.3em;
+    font-weight: normal;
+    color: white;
+    display: list-item;
+    text-align: justify;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom:5px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 10px 0px 10px 0px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    color: #96D709;
+    text-align: left;
+}
+
+h1 {
+    padding: 0;
+    font-size: 1.6em;
+    /* font-size: xx-large; */
+}
+
+h2 {
+    padding: 0;
+    font-size: 1.4em;
+    /* font-size: x-large; */
+}
+
+h3 {
+    padding: 0px 3px 0px 3px;
+    font-size: 1.2em;
+    /* font-size: large; */
+}
+
+h4 {
+    padding: 0px 6px 0px 6px;
+    font-size: medium;
+}
+
+h5 {
+    padding: 0px 9px 0px 9px;
+    font-size: small;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    line-height: 1.3em;
+    font-weight: normal;
+    color: white;
+    text-align: justify;
+}
+
+dt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    line-height: 1.3em;
+    font-weight: bold;
+    color: white;
+    text-align: justify;
+}
+
+dd {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    line-height: 1.3em;
+    font-weight: normal;
+    color: white;
+    text-align: justify;
+}
+
+em {
+    font-style:italic;
+}
+
+/* The 'fixed' div holds everything*/
+/*
+div.fixed {
+    padding: 0px;
+    margin: 0 auto;
+    width: 980px;
+    text-align: left;
+}
+*/
+/* HEADER STYLES */
+
+div.header {
+    position: relative;
+    float: left;
+    width: 980px;
+    height: 104px;
+    background-image: url(../images/header1.gif);
+    background-repeat: no-repeat;
+}
+
+div.header p {
+    text-align: right;
+    font-size: small;
+}
+
+div.header a.highlight {
+    color: orange;
+}
+
+div.header a.highlight:hover {
+    text-decoration: none;
+    color: #0099FF;
+}
+/*
+div.header img {
+    margin: 0px;
+    border: 0;
+}
+*/
+
+/* TOP NAVIGATION BARS*/
+
+div.navbar {
+    position: relative;
+    width: 980px;
+    height: 40px;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    line-height: 40px;
+    /*
+    background-image: url(../images/topnav_bg1.gif);
+    background-repeat: no-repeat;
+    */
+}
+
+div#topnav {
+    background-image: url(../images/topnav_bg1.gif);
+    background-repeat: no-repeat;
+}
+
+div.navbar ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding:0;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+}
+
+div.navbar li {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+}
+
+div.navbar li ul {
+    display: none;
+    width: 100%;
+}
+
+div.navbar li:hover ul {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 200;
+}
+
+div.navbar li:hover li {
+    float: none;
+}
+
+div.navbar li:hover li a {
+    background-color: #363636;
+    background-image: url(../images/dropdown_bg.gif);
+    background-repeat: repeat-x;
+}
+
+/*
+div.navbar li:hover li a:hover {
+    background-color: white
+}
+*/
+div.navbar ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    /* padding: 0;
+    margin: 0;
+    */
+    display: block;
+    line-height: 40px;
+    height: 40px;
+    vertical-align: middle;
+    padding: 0 23px;
+}
+
+div.navbar a:hover {
+    text-decoration: none;
+    color: #0099FF;
+}
+
+div.navbar a.highlight {
+    color: orange;
+}
+
+div.navbar a.highlight:hover {
+    text-decoration: none;
+    color: #0099FF;
+}
+
+div#midnav_older.navbar {
+    height: 80px;
+}
+
+div#midnav_older.navbar p {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+div#midnav_older.navbar p > a {
+    font-weight: bold;
+    color: #0099FF;
+}
+
+div#midnav_older.navbar p > a:hover {
+    font-weight: bold;
+    color: #0099FF;
+}
+
+div#midnav_older li:first-child a {
+    padding-left: 35px;
+}
+
+div#midnav {
+    padding-bottom: 1px;
+    width:inherit;
+}
+
+div#midnav li a {
+    padding: 0px 16px;
+}
+
+div#midnav li:first-child a {
+    /* Add indentation to the midnav menu bar */
+    padding-left: 40px;
+}
+
+
+/* Search div */
+
+div.search {
+    position: relative;
+    width: 980px;
+    height: 40px;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    line-height: 40px;
+}
+
+/* Style of Algorithms page */
+
+div#algorithms h3 {
+    font-size:90%;
+}
+
+div#algorithms li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    color: white;
+    display:list-item;
+    margin: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left:0px;
+}
+
+/* Table to contain images & provide a caption */
+
+table.figure {
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    border: 0;
+    padding: 0;
+    margin: 1em;
+}
+
+table.figure > tbody > tr > td {
+    color: yellow;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+table.figure a {
+    text-decoration: none;
+}
+
+table.figure img {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0 auto 0 auto;
+}
+
+table.centerfigure {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    padding: 0;
+    margin: 1em auto 1em auto;
+}
+
+table.centerfigure > tbody > tr > td {
+    color: yellow;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+table.centerfigure a {
+    text-decoration: none;
+}
+
+table.centerfigure img {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0 auto 0 auto;
+}
+
+/* This style should be used for most tables. */
+
+table.common {
+    text-align: left;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 10px auto 10px auto;
+}
+
+table.common > tbody > tr > th {
+    border: 1px solid white;
+    color: yellow;
+    font-weight: bold;
+	padding:4px;
+}
+
+table.common > tbody > tr > td {
+    border: 1px solid white;
+    color: white;
+    font-weight: normal;
+	padding:4px;
+}
+
+table.common > caption {
+    color: yellow;
+    font-weight: normal;
+}
+
+/* Useful for tables-within-tables */
+
+table.noborder {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+table.noborder > tbody > tr > th {
+    border: 0;
+    padding: 3px;
+    margin: 0;
+    color: yellow;
+    font-weight: bold;
+}
+
+table.noborder > tbody > tr > td {
+    border: 0;
+    padding: 3px;
+    margin: 0;
+    color: white;
+    font-weight: normal;
+}
+
+table.noborder > caption {
+    color: yellow;
+    font-weight: normal;
+}
+
+
+/* For tables providing quick facts about the DR9 BOSS ancillary products (dr9/algorithms/ancillary/) */
+
+table.ancillary {
+    width:auto;
+    text-align: left;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 10px auto 10px auto;
+}
+
+table.ancillary th {
+    border: 1px solid white;
+    color: yellow;
+    font-weight: bold;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:6px;
+    padding-right:6px;
+}
+
+table.ancillary td {
+    border: 1px solid white;
+    color: white;
+    font-weight: normal;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:6px;
+    padding-right:10px;
+}
+
+
+
+/* Used for contact information */
+
+table.contact {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+table.contact > tbody > tr > th {
+    width: 50%;
+    border: 0;
+    color: yellow;
+    font-weight: bold;
+}
+
+table.contact > tbody > tr > td {
+    width: 50%;
+    border: 0;
+    color: white;
+    font-weight: normal;
+}
+
+/* Used for 3-column contact information */
+
+table.contact3 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+table.contact3 > tbody > tr > th {
+    width: 33%;
+    border: 0;
+    color: yellow;
+    font-weight: bold;
+}
+
+table.contact3 > tbody > tr > td {
+    width: 33%;
+    border: 0;
+    color: white;
+    font-weight: normal;
+}
+/* Other useful CSS tricks */
+
+span.ismall {
+    font-style: italic;
+    font-size: small;
+}
+
+span.u {
+    text-decoration: underline;
+}
+
+span.b {
+    font-weight: bold;
+}
+
+span.i {
+    font-style: italic;
+}
+
+ol.i {
+    list-style-type: lower-roman;
+}
+
+span.imgoptions {
+    color: orange;
+    font-size: small;
+    font-weight: bold;
+}
+
+a.imgoptions {
+    font-size: small;
+}
+
+/* Used for the top date on press releases */
+
+p.press {
+    color: #96D709;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.ref {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: left;
+}
+
+/* Used for boilerplate */
+
+p.small {
+    font-size: small;
+}
+
+.todo {
+    color: red;
+    font-weight: bold;
+}
+
+.new {
+    color: yellow;
+}
+
+.term {
+    font-style:italic;
+    font-weight:bold;
+}
+
+.algorithmintro {
+    border-left:medium solid orange;
+    margin-left:12px;
+    margin-right:38px;
+    padding-left:12px;
+}
+
+/* Styles used by the "Simple coverage check form" on the DR9 index page */
+
+.resultspane {
+    height: 100px;
+    background-color: white;
+/*     border:thick solid yellow !important; */
+}
+.errormsg {
+    color: red;
+    font-size: large;
+}
+
+

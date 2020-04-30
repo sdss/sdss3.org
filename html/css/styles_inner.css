@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+/* Styles that apply to any file that is NOT the top-level index.php file. */
+
+body {
+    /* margin: 0; */
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    /* width: 100%; */
+    width: 980px;
+    /* text-align: center; */
+    text-align: left;
+    background-color: #202020;
+    background-image: url(../images/page_bg_inner.gif);
+    background-repeat: repeat-x;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main content column container */
+
+div.main_container {
+    position: relative;
+    clear: both;
+    width: 980px;
+    overflow: hidden;
+    padding: 10px 0px 0px 0px;
+    margin: 0px;
+}
+
+/* Sidemenu settings */
+
+div.leftnav {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: auto;
+    padding: 0px 5px 5px 5px;
+    margin: 0px;
+}
+
+div.leftnav ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    height: auto;
+}
+
+div.leftnav li {
+    line-height: 1.6em;
+    font-size: small;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+}
+
+div.leftnav li:before {
+    content: ":: ";
+}
+
+div.leftnav ul > li:first-child > a {
+    font-weight: bold;
+}
+
+div.leftnav a {
+    color: white;
+    text-decoration: none;
+}
+
+div.leftnav a:hover {
+    text-decoration: none;
+    color: #0099FF;
+}
+
+div.leftnav a.highlight {
+    color: orange;
+}
+
+div.leftnav a.highlight:hover {
+    text-decoration: none;
+    color: #0099FF;
+}
+
+/* Right column settings */
+
+div.right_content {
+    float: right;
+    width: 800px;
+    position: relative;
+    padding: 0 5px 5px 5px;
+    margin: 0;
+    background-color: #282828;
+    border: 5px solid #282828;
+    -moz-border-top-colors:       #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    -moz-border-left-colors:      #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    -moz-border-bottom-colors:    #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    -moz-border-right-colors:     #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    -webkit-border-top-colors:    #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    -webkit-border-left-colors:   #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    -webkit-border-bottom-colors: #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    -webkit-border-right-colors:  #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    border-top-colors:            #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    border-left-colors:           #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    border-bottom-colors:         #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+    border-right-colors:          #1F1F1F #1E1E1E #1C1C1C #191919 #272727;
+}
+
+/* Footer settings */
+
+p.footer {
+    padding: 0;
+    width: 200px;
+    margin: 0px 0px 0px 600px; /* This should be the only difference from styles_index.css. */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+}
+
+table.footer {
+    width: 100%;
+    padding: 0;
+    margin: 5px 0 0 0;
+    border: 0;
+    border-collapse: collapse;
+}
+
+table.footer td {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: x-small;
+}
+
+table.footer td#fileft {
+    background-color: #545D54;
+}
+
+table.footer td#firight {
+    width: 200px;
+    background-color: #6351BD;
+}

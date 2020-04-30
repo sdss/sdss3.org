@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/* Used to set off the most important single sentence at the top of some pages */
+div.summary {
+/*  background-color: #4AA02C; */
+    background-image: url(../images/sdsspiebkgd100.jpg);
+    background-repeat: no-repeat;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-left: 110px;
+    padding-right: 30px;
+    border-bottom: solid medium orange;
+}
+
+div.summary p {
+    font-size: large;
+}
+
+div.summary ul {
+    margin-left: 40px;
+    margin-top: -5px;
+    margin-bottom: inherit;
+    height: inherit;
+}
+
+div.summary li {
+    font-size:large;
+}

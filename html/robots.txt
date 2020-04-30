@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /internal/
+Disallow: /mailman/
+Disallow: /svn/
+Disallow: /science/firefighters.php

@@ -1,0 +1,2642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- DO NOT REMOVE -->
+<head><title>SDSS-III Glossary Data</title></head><!-- DO NOT REMOVE -->
+<body><!-- DO NOT REMOVE -->
+<h1>SDSS-III Glossary Data</h1><!-- DO NOT REMOVE -->
+<div id="do_not_remove_this_documentation">
+<p>This file contains the data that is converted into the SDSS-III glossary.</p>
+<p>This file is a 100% valid XHTML file, please keep it that way.</p>
+<p>The rules of the <a href="https://trac.sdss3.org/wiki/WebSite#StyleGuide">SDSS-III style guide</a>
+should be followed, with the following additions:</p>
+<ol>
+<li>When linking to a data-release specific page (<em>e.g.</em>, "dr9/algorithms/"),
+replace the data release number with "XX" ("dr9/algorithms" becomes "drXX/algorithms").</li>
+<li>Terms that are specific to certain data releases are indicated by adding
+a class attribute to the 'dt' element.  For example:
+<code>&lt;dt id="ancillary" class="9 10"&gt;</code>.  You can make the item
+disappear entirely by setting a number less than 8, <code>&lt;dt id="zconf" class="7"&gt;</code>.</li>
+</ol>
+<p>Please try to keep this file in alphabetical order, but it is not critical
+to do so, as these data will be sorted after reading.</p>
+</div>
+<dl><!-- DO NOT REMOVE -->
+
+<!-- AAAAA -->
+
+<dt id="adaptive_moment">Adaptive Moments</dt>
+
+<dd>
+A method of measuring object shapes (<em>i.e.</em>, fitting those shapes to ellipses).
+These moments are close to optimal for measuring the shapes of faint galaxies,
+and have been used for weak lensing studies. See the
+<a href="drXX/algorithms/classify.php#photo_adaptive">Adaptive Moments</a>
+section of the <a href="drXX/algorithms/">algorithms pages</a>.
+</dd>
+
+<dt id="ancillary" class="9 10">Ancillary Target (BOSS)</dt>
+
+<dd>
+Spectroscopic target selection in <a href="drXX/help/glossary.php#BOSS">BOSS</a>
+is dominated by two categories: <a href="drXX/help/glossary.php#luminous_red_galaxy">LRGs</a>,
+and quasars. However, a small fraction of the fibers are devoted to a variety of additional
+projects, ranging from studies of variable stars to host galaxies of supernovae.
+These additional targets are referred to as BOSS Ancillary Targets.
+A full list of the target flags may be found in the descriptions of
+<a href="drXX/algorithms/bitmask_ancillary_target1.php">ANCILLARY_TARGET1</a>
+and <a href="drXX/algorithms/bitmask_ancillary_target2.php">ANCILLARY_TARGET2</a>.
+</dd>
+
+<dt id="ancillaryapogee" class="10">Ancillary Target (APOGEE)</dt>
+
+<dd>
+Target observed as part of an <a href="drXX/help/glossary.php#APOGEE">APOGEE</a> ancillary program
+to utilize the survey's capabilities for interesting science beyond its primary survey goals.
+The target flags associated with APOGEE ancillary programs are part of the
+<a href="drXX/algorithms/bitmask_apogee_target1.php">APOGEE_TARGET1</a> bitmask.
+The ancillary programs are described in the <a href="drXX/algorithms/ancillary/apogee/">APOGEE
+Ancillary Targets</a> pages.
+</dd>
+
+<dt id="ANNZ">ANNZ</dt>
+
+<dd>A neural network technique for selecting quasars for spectroscopy in the BOSS survey.
+It is one of the techniques used in the <a href="drXX/help/glossary.php#BONUS">BONUS quasar
+sample</a>. The algorithm is described in
+<a href="http://adsabs.harvard.edu/abs/2010A%26A...523A..14Y">Y&egrave;che et al. 2010</a>.</dd>
+
+<dt id="APO">APO</dt>
+
+<dd>Apache Point Observatory, located in Sunspot, New Mexico. This is the
+location of the 2.5m SDSS telescope as well as the <a
+href="drXX/help/glossary.php#photo_tel">Photometric Telescope (PT)</a>, as well as other
+non-SDSS telescopes, such as the ARC 3.5m telescope. See the <a href="http://www.apo.nmsu.edu/">APO
+homepage</a>.</dd>
+
+<dt id="APOGEE">APOGEE</dt>
+
+<dd>The Apache Point Observatory Galactic Evolution Experiment, one of
+four surveys included in SDSS-III.
+This is using a high-resolution (R~22,500) H-band spectrograph fed by 300
+fibers. The spectrograph saw first light in 2011, and the survey will
+observe roughly 100,000 stars, mostly in the disk of the Milky Way, to obtain
+detailed chemical compositions and kinematics.  The first data from
+APOGEE was released publicly in Data Release 10.</dd>
+
+<dt id="aspcap" class="10">APOGEE Stellar Parameters and Chemical Abundances Pipeline (ASPCAP)</dt>
+
+<dd>The software pipeline used by APOGEE to calculate basic stellar parameters (T<sub>eff</sub>,
+log(g), [Fe/H], [&alpha;/H]) and other elemental abundances (Garcia P&eacute;rez
+et al., <i>in prep</i>.). The pipeline is described in the
+<a href="drXX/irspec/aspcap.php">ASPCAP</a> pages of the Infrared Spectra documentation.</dd>
+
+
+<dt id="ARC">ARC</dt>
+
+<dd>Astrophysical Research Consortium.  Incorporated in the State of Washington.
+ Members include the University of Washington; New Mexico State University;
+ The University of Chicago, Princeton University; Johns Hopkins University;
+ the University of Virginia; the University of Colorado; the Institute for Advanced Study.
+ Body that owns and operates <a href="drXX/help/glossary.php#APO">APO</a>.</dd>
+
+<dt id="asinh">Asinh Magnitude</dt>
+
+<dd>Magnitudes within SDSS-I/II are expressed as inverse
+hyperbolic sine (or "asinh") magnitudes, sometimes referred to informally as
+<em>luptitudes</em>. The transformation from linear flux measurements to
+asinh magnitudes is designed to be virtually identical to the standard
+astronomical magnitude at high signal-to-noise ratio, but to switch over to
+linear behavior at low S/N and even at negative values of flux, where the
+logarithm in the <a href="drXX/help/glossary.php#mag_pogson">Pogson magnitude</a>
+fails.  Details can be found in the
+<a href="drXX/algorithms/magnitudes.php">Photometry section</a> of the
+Algorithms pages, or the
+<a href="http://adsabs.harvard.edu/abs/1999AJ....118.1406L">Lupton et al. (1999) AJ paper</a>.</dd>
+
+
+<dt id="ASPCAP" class="10">ASPCAP</dt>
+
+<dd>The <a href="drXX/help/glossary.php#aspcap">APOGEE Stellar
+Parameters and Chemical Abundances Pipeline (ASPCAP)</a></dd>.
+
+<dt id="astrans">asTrans file</dt>
+
+<dd>FITS binary table with astrometric transformations for every field in a
+single imaging run. It transforms frame (row,col) coordinates to great
+circle (&mu;,&nu;) coordinates for a given inclination. Available
+in the <a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="Astrda">AstroDA</dt>
+
+<dd>The data acquisition and analysis system used to collect data from the survey telescope cameras.</dd>
+
+<dt id="Astrom">Astrom</dt>
+
+<dd>The data processing pipeline that maps CCD pixel coordinates to celestial
+coordinates. The detailed workings of this pipeline are described in the
+<a href="drXX/algorithms/astrometry.php">Astrometry</a> section of the
+<a href="drXX/algorithms/">algorithms pages</a>, or the
+<a href="http://adsabs.harvard.edu/abs/2003AJ....125.1559P">Pier et al. (2003) AJ paper</a>.</dd>
+
+<dt id="astrom_chip">Astrometric Chip</dt>
+
+<dd>The SDSS <a href="drXX/help/glossary.php#camera">camera</a>
+contains 24 2048x400 pixel CCDs (in addition to the 30 2048x2048
+photometric CCDs) which were used for astrometry and focus
+monitoring. Because they are smaller chips, the effective exposure
+time is only 11 seconds, allowing the survey to observe brighter stars
+without saturation. These bright star positions were necessary to match
+to objects present in astrometric catalogs used by the <a
+href="drXX/help/glossary.php#Astrom">Astrom pipeline</a>. They are no longer used for this purpose; soon after
+SDSS operations started, the UCAC catalog of astrometric standards faint enough
+not to be saturated in the main SDSS chips became available.
+For more details on these chips,
+please see the appropriate section of the <a
+href="instruments/camera.php">camera page</a> or the AJ
+imaging camera paper (<a
+href="http://adsabs.harvard.edu/abs/1998AJ....116.3040G">Gunn et al. 1998</a>).</dd>
+
+<dt id="astrometry">Astrometry</dt>
+
+<dd>The detailed methodology utilized by the SDSS to do astrometric (positional)
+calibration is described in the <a
+href="drXX/algorithms/astrometry.php">Astrometry</a> section of the <a
+href="drXX/algorithms/">algorithms pages</a>.</dd>
+
+<dt id="astrotools">Astrotools</dt>
+
+<dd>A software environment in which several of the SDSS pipelines are run,
+including the image processing pipeline, <code>photo</code>.</dd>
+
+<dt id="atlas_image">Atlas Image</dt>
+
+<dd>For each detected <a href="drXX/help/glossary.php#object">object</a>, the atlas image
+comprises the pixels that were detected as part of the object in any
+filter. These are available through the <a href="drXX/help/glossary.php#SAS">SAS</a>, as a
+single file for each field.</dd>
+
+<!-- BBBBB -->
+
+<dt id="binned_frame">Binned Frame</dt>
+
+<dd>Each file is a FITS image for one filter, 512 x 372 pixels, with WCS
+information. These are the
+<a href="drXX/help/glossary.php#corrected_frame">corrected frames</a> with
+detected objects removed and binned 4 pixels by 4 pixels. All pixels
+that are in <a href="drXX/help/glossary.php#atlas_image">atlas images</a> are
+replaced by the background level before binning, with suitable noise added.
+All of the header parameters from the original image are inherited as well.
+Available in the <a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="blackbook">Black Book</dt>
+
+<dd>See <a href="drXX/help/glossary.php#project_book">Project Book</a>.</dd>
+
+<dt id="BONUS">BONUS quasars</dt>
+
+<dd>The principal science goal of the BOSS quasar sample is to measure the
+clustering signal in the Lyman-&alpha; forest, which does not require that the
+quasar sample be uniformly selected across the sky. While the
+<a href="drXX/help/glossary.php#CORE">CORE quasars</a> are uniformly selected,
+an additional 20 quasars per square degree, the BONUS quasars, are selected using
+a combination of techniques and available data that is not required to be
+uniformly selected. See also <a href="drXX/help/glossary.php#CORE">CORE quasars</a>.</dd>
+
+<dt id="boresight">Boresight</dt>
+
+<dd>The telescope control computer keeps track
+of a specific point in the telescope focal plane that is called the
+<em>boresight</em>. The boresight is not fixed in the array but is at one of two
+places for the two <a href="drXX/help/glossary.php#strip">strips</a> that
+compose a <a href="drXX/help/glossary.php#stripe">stripe</a>. It is the
+boresight that will track <a href="drXX/help/glossary.php#great_circle_coords">great
+circles</a>. Technically, the boresight tracks a path that is a great circle
+in J2000 coordinates as viewed from the solar system barycenter.</dd>
+
+<dt id="BOSS">BOSS</dt>
+
+<dd>The Baryon Oscillation Sky Survey, one of the four component surveys
+of SDSS-III.  It is obtaining redshifts of 1.5 million galaxies, and spectra
+of 150,000 z &gt; 2.2 quasars, to measure the baryon oscillation signal in the
+correlation function as a geometrical probe of cosmology.  It also obtained
+imaging over roughly 3100 deg<sup>2</sup> of the Southern Galactic Cap beyond
+that in SDSS-I/II.  It uses substantially improved spectrographs over those
+used in SDSS-I and SDSS-II, with more fibers per plate (1000 vs. 640),
+smaller fiber aperture (2", not 3"), improved throughput,
+and somewhat wider wavelength coverage.</dd>
+
+<dt id="bright">BRIGHT detections</dt>
+
+<dd>A technical term in the photometric reductions.  The photometric
+pipeline performs a first-pass detection that searches for very
+significant objects, which are typically bright stars and galaxy, in
+preparation for the full object detection algorithm.  These objects
+are measured and included in the final catalog, but never as <a
+href="drXX/help/glossary.php#surveyprimary">survey primary</a> or <a
+href="drXX/help/glossary.php#surveysecondary">survey secondary</a>
+objects. All such objects are redetected and remeasured in the
+second-pass of the pipeline, and those (non-BRIGHT) detections are the
+ones to actually use. BRIGHT detections have the BRIGHT bit set in
+their <a href="drXX/algorithms/bitmask_flags1.php">photometric
+flags</a>.</dd>
+
+<!-- CCCCC -->
+
+<dt id="calibration">Calibration</dt>
+
+<dd>The process by which the photometric and spectroscopic observations are
+calibrated. The goal of calibration is to take the digital camera readouts
+and convert them to measured quantities like fluxes. The details of these
+procedures can be found on the <a href="drXX/algorithms/">algorithms pages</a>.</dd>
+
+<dt id="camcol">Camcol</dt>
+
+<dd>A Camcol is the output of one camera column of CCDs (each with a different
+filter) as part of a <a href="drXX/help/glossary.php#run">Run</a>. Therefore,
+1 Camcol = 1/6 of a Run. It is also a portion of a
+<a href="drXX/help/glossary.php#scanline">scanline</a>.</dd>
+
+<dt id="camera">Camera</dt>
+
+<dd>The instrument used for imaging in SDSS. It consists of 30
+photometric and 24 astrometric CCDs (see the <a
+href="instruments/camera.php">camera description</a>).  The
+camera is a mosaic of 54 CCD detectors in the focal plane, 30 large
+devices arranged in 6 columns of 5 each and 24 smaller devices around
+the periphery. See this <a href="images/camassy2.gif">sketch
+of the camera focal plane</a> or this <a
+href="images/faceplat.gif">real life image</a>. The camera is
+described in detail in the imaging camera paper (<a
+href="http://adsabs.harvard.edu/abs/1998AJ....116.3040G">Gunn et
+al. 1998</a>). The last imaging data in SDSS was released in DR8; the
+camera has now been decommissioned. </dd>
+
+<dt id="CAS">CAS (Catalog Archive Server)</dt>
+
+<dd>The <a href="http://skyserver.sdss3.org/drXX/">Catalog Archive Server</a>
+is a searchable database that contains the measured parameters from all objects in the imaging
+survey and the spectroscopic survey.</dd>
+
+<dt id="casjobs">CasJobs</dt>
+
+<dd>A batch (asynchronous) interface to the <a
+href="drXX/help/glossary.php#CAS">CAS</a> for querying the database and
+storing results. CasJobs is designed to handle especially long or otherwise demanding queries.</dd>
+
+<dt id="caveats">Caveats</dt>
+
+<dd>Also known as "known problems."  SDSS maintains a list of issues or
+imperfections of the data and/or its processing. We have a list of <a
+href="drXX/imaging/caveats.php">imaging caveats</a>, <a
+href="drXX/spectro/caveats.php">(optical) spectroscopic caveats</a>,
+and <a href="drXX/irspec/caveats.php">infrared spectrosopic caveats</a>.</dd>
+
+<dt id="central_meridian">Central Meridian</dt>
+
+<dd>The meridian which passes through the center of the survey area in
+the Northern Galactic Cap, 12h&nbsp;20m, defines the central meridian of an
+imaging scan. The great circle perpendicular to it passing through the survey
+center at δ = 32.8&deg; is the
+<a href="drXX/help/glossary.php#survey_equator">survey equator</a>.</dd>
+
+<dt id="child">Child</dt>
+
+<dd>A product of the <a href="drXX/help/glossary.php#deblend">deblending</a> process
+in the image processing. When two objects are near each other on the sky,
+their images may appear merged. The deblender tries to split this merged
+image; the resulting sub-images are called children. The initial merged
+image is called a <a href="drXX/help/glossary.php#parent">parent</a>. For more
+details, see the <a href="drXX/algorithms/deblend.php">Deblending</a>
+section of the <a href="drXX/algorithms/">algorithms pages</a>.</dd>
+
+<dt id="classification">Classification (photometric)</dt>
+
+<dd>The method by which we assign a type (star or galaxy) to each
+<a href="drXX/help/glossary.php#object">object</a> in the SDSS images.
+The details of this procedure are described in the
+<a href="drXX/algorithms/classify.php">Classification</a> section of the
+<a href="drXX/algorithms/">algorithms pages</a>; in brief, it is based on the
+difference between PSF and model magnitudes.</dd>
+
+<dt id="cloud_cam">Cloud Camera</dt>
+
+<dd>A camera at the mountain that takes continuous pictures
+of the sky at 10&nbsp;&mu;m, a wavelength at which clouds emit.
+It is a sensitive measure of the photometricity of the sky as a
+function of time. It is described <a href="http://irsc.apo.nmsu.edu/irsc_doc/">here</a>.</dd>
+
+<dt id="cloud_cam_status">Cloud Camera Status</dt>
+
+<dd><p>The cloud camera status is built from an analysis of the 10&nbsp;&mu;m
+<a href="drXX/help/glossary.php#cloud_cam">cloud cameras</a>
+used at the APO site. The full history is stored in two
+files in the <a href="drXX/software/products.php">photoop product</a>:</p>
+<ul>
+<li>opfiles/opCloudcam.par (when was the cloudcam on)</li>
+<li>opfiles/opCloudveto.par (when was it cloudy)</li>
+</ul>
+<p>The software generating these files from the raw IRCAM data is in
+pro/ircam.</p>
+<p>In individual files in the reductions the CLOUDCAM flag gets set
+with the following possible values:</p>
+<ul>
+<li>-1 : UNKNOWN (cloud camera not on)</li>
+<li>0 : CLOUDY (cloud camera indicates clouds)</li>
+<li>1 : CLEAR (cloud camera indicates clear)</li>
+</ul>
+</dd>
+
+<dt id="CMASS">CMASS</dt>
+
+<dd>A sample of galaxies targeted for spectroscopic followup in the BOSS survey.
+It is designed to select luminous galaxies in the redshift range 0.4 &lt; z &lt; 0.8,
+with a roughly uniform space density of 3 &times; 10<sup>-4</sup> (h/Mpc<sup>3</sup>) to
+z ~ 0.6, with a tail to z ~ 0.8. "CMASS" stands for "Constant (stellar) MASS."
+See also <a href="drXX/help/glossary.php#luminous_red_galaxy">luminous red galaxy</a>
+and <a href="drXX/help/glossary.php#LOWZ">LOWZ</a>.</dd>
+
+<dt id="CMM">CMM</dt>
+
+<dd>Coordinate Measuring Machine, a device used to measure the positions
+of holes in the <a href="drXX/help/glossary.php#fiber">fiber</a> mount <a
+href="drXX/help/glossary.php#plate">plates</a> for the spectrographic survey.</dd>
+
+<dt id="cmodel">Cmodel magnitude</dt>
+
+<dd>Composite model magnitude. See
+<a href="drXX/help/glossary.php#mag_cmodel">magnitude, cmodel</a>.</dd>
+
+<dt id="cohort" class="10">Cohort</dt>
+
+<dd>A set of targets in the same APOGEE field observed together for the same number
+of <a href="drXX/glossary.php#visit">visits</a>. A given APOGEE plate may have multiple cohorts on it.</dd>
+
+<dt id="false">Color Image Pipeline</dt>
+
+<dd>A pipeline to produce 3-color JPG files of zoomed-down SDSS images; these are
+available from the CAS.</dd>
+
+<dt id="convex">Convex</dt>
+
+<dd>A convex is the intersection of one or more circles, with a depth (the number of circles
+involved). If we have two intersection circles, A and B, then both (A) and (B) are a convex
+of depth 1, their intersection (A)(B) is also a convex, but of depth 2. We call these simple
+convexes "wedges."</dd>
+
+<dt id="coordinates">Coordinates</dt>
+
+<dd>The SDSS uses several different coordinate systems. We use
+standard astronomical right ascension (RA) and declination (Dec),
+J2000. There is also the <em><a href="drXX/help/glossary.php#survey_coords">survey
+coordinate system</a></em>, with coordinates <a href="drXX/help/glossary.php#lambda">&lambda;</a>
+and <a href="drXX/help/glossary.php#eta">&eta;</a>. This is just a rotation of the usual RA, Dec
+system. There is a variant on this known
+	as <a href="drXX/help/glossary.php#corrected_survey_coords">corrected survey
+	coordinates</a> with different ranges for &lambda; and &eta;. There is the
+    <em><a href="drXX/help/glossary.php#great_circle_coords">great
+circle coordinate system</a></em>, which is actually a separate
+coordinate system for each <a href="drXX/help/glossary.php#stripe">stripe</a>. The
+coordinates of this system are <a href="drXX/help/glossary.php#mu">&mu;</a> and
+<a href="drXX/help/glossary.php#nu">&nu;</a>. For APOGEE infrared spectra in Data Release
+10 and later, we also use galactic coordinates: galactic longitude (L) and galactic latitude (B).
+(Note that our convention is to use capital letters to symbolize galactic coordinates to avoid
+confusion between the lowercase letter l and the number 1). The algorithms pages have
+<a href="drXX/algorithms/surveycoords.php">details on all these coordinate systems</a>.</dd>
+
+<dt id="corrected_frame">Corrected Frame</dt>
+
+<dd>Each corrected frame is a FITS image for one filter, 2048 columns by
+1489 rows, with row number increasing in the scan direction. These are the
+imaging frames with flat-field, bias, cosmic-ray, and pixel-defect corrections
+applied, sky subtracted, and photometric calibration applied. A raw image
+contains 1361 rows, and a corrected frame has the first 128 rows of the
+following corrected frame appended to it. The pixels subtend 0".396 square
+on the sky. Header information using the
+<a href="drXX/help/glossary.php#wcs">world coordinate system (WCS)</a> allows
+standard astronomical FITS tools to convert pixel position to right
+ascension and declination. Available in the
+<a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="corrected_survey_coords">Corrected Survey Coordinates</dt>
+
+<dd>A variant on
+<a href="drXX/help/glossary.php#survey_coords">Survey Coordinates</a>,
+for which the range of &eta; is -180 to 180
+and the range of &lambda; is -90 to 90.
+See the algorithms page for <a
+href="drXX/algorithms/surveycoords.php">SDSS survey coordinates</a>.</dd>
+
+<dt id="CSV">CSV (comma-separated variable/value)</dt>
+
+<dd>Comma Separated Variable (or Comma Separated Value) file. A file
+format used commonly for input to and output from the <a
+href="drXX/help/glossary.php#CAS">CAS</a>.</dd>
+
+<dt id="CORE">CORE quasars</dt>
+
+<dd>In the BOSS survey, 20 quasar targets per square degree are selected for
+spectroscopy using a spatially uniform technique, called "CORE," allowing science
+requiring a uniform selection of quasars to be done. The CORE algorithm starting
+in the second year of BOSS is the "extreme deconvolution" technique,
+<a href="drXX/help/glossary.php#XDQSO">XDQSO</a> See also
+<a href="drXX/help/glossary.php#BONUS">BONUS quasars</a>.</dd>
+
+<dt id="CVS" class="7">CVS</dt>
+
+<dd>The Concurrent Versions System, used by SDSS software and website
+developers to maintain versioning control. An open source project available
+at <a href="http://www.cvshome.org/">https://www.cvshome.org/</a>.</dd>
+
+<dt id="cx">cx/cy/cz</dt>
+
+<dd>The coordinates on the unit sphere utilized by the
+<a href="drXX/help/glossary.php#htm">HTM</a> code; stored in the CAS.</dd>
+
+<!-- DDDDD -->
+
+
+<dt id="DAS">DAS</dt>
+
+<dd>The Data Archive Server, which provided access, for SDSS-I/II, to the imaging and
+spectroscopic products of the survey as flat files.  Its functionality is replaced with the
+Science Archive Server (<a href="drXX/help/glossary.php#SAS">SAS</a>).</dd>
+
+<dt id="data_model">Data Model</dt>
+
+<dd>The description of the structure and organization of the data in a
+database. The data model tells you all the table names, their contents,
+and how they are related to, and linked with, one another. The actual
+implementation of a data model is called the database schema. For the
+flat files available in the <a href="drXX/help/glossary.php#SAS">SAS</a>, the
+data models are available <a href="http://data.sdss3.org/datamodel/">here</a>.</dd>
+
+<dt id="deblend">Deblend</dt>
+
+<dd>Deblending is the process by which overlapping objects in images are
+separated. The <a href="drXX/help/glossary.php#frames_pipeline">frames pipeline</a>
+attempts to determine whether each object actually consists of
+more than one object projected on the sky and, if so, to deblend
+such a <a href="drXX/help/glossary.php#parent">parent</a> object into its
+constituent <a href="drXX/help/glossary.php#child">children</a>, self-consistently
+across the bands (thus, all children have measurements in all bands). For
+details on how this works, and what <a href="drXX/help/glossary.php#flag">flags</a>
+this procedure may set, see the
+<a href="drXX/algorithms/deblend.php">Deblending</a> section of the
+<a href="drXX/algorithms/">algorithms pages</a>.</dd>
+
+<dt id="Dervish" class="7">Dervish</dt>
+
+<dd>An <a href="drXX/help/glossary.php#FNAL">FNAL</a> software toolkit used by
+many of the data acquisition and reduction systems.</dd>
+
+<dt id="design" class="10">Design (APOGEE)</dt>
+
+<dd>A set of APOGEE targets selected together for drilling on a plate or plates;
+may consist of up to one each of short, medium, and long <a href="drXX/help/glossary.php#cohort">cohort</a>s. A design is
+identified by an integer <a href="drXX/help/glossary.php#design_id">Design ID</a>.
+Changing a single target on a design results in a new design.</dd>
+
+<dt id="design_id" class="10">Design ID</dt>
+
+<dd>A unique integer assigned to each APOGEE <a href="drXX/help/glossary.php#design">Design</a>.</dd>
+
+<dt id="dev">de&nbsp;Vaucouleurs</dt>
+
+<dd><p>Also known as the <var>r</var><sup>1/4</sup> law, it describes the radial light
+profile of a typical elliptical galaxy. Defined
+as</p>
+<p><var>I</var>(<var>r</var>) = <var>I</var><sub>0</sub>&nbsp;exp(-7.67&nbsp;[<var>r</var>/<var>r</var><sub>e</sub>]<sup>1/4</sup>).</p>
+<p>An elliptical version of this profile is fit to every detected object,
+yielding the <code>deV</code> parameters. See the
+<a href="drXX/algorithms/magnitudes.php#mag_model">model magnitude section</a> of
+the photometry algorithm page for details.</p></dd>
+
+<dt id="DR1">DR1&hellip;10</dt>
+
+<dd>Data Release 1 through 10, the formal periodic releases of SDSS data to the
+public. A small portion of the data was released as part of the
+<a href="drXX/help/glossary.php#EDR">Early Data Release (EDR)</a>.  The data
+releases are cumulative: later releases include more recent data and
+re-processed older data.  DR7 is the final release of SDSS-II data.
+DR8 is the first release of SDSS-III data, and includes most (although not all)
+SDSS-I/II data as well. Each Data Release is associated with a journal
+article that describes changes from the previous release.</dd>
+
+<!-- EEEEE -->
+
+<dt id="eclass" class="7">eClass</dt>
+
+<dd>A value between -1 and +1 assigned by the spectro1d pipeline to each spectrum, derived from
+principal component vectors. In general, spectra with lower-temperature absorption features
+have more negative eClass, and spectra with higher temperature features or emission lines have
+more positive eClass.</dd>
+
+<dt id="EDR">EDR</dt>
+
+<dd>Early Data Release. The first public release of SDSS data occurred in
+June of 2001. The EDR is described in the <a
+href="http://adsabs.harvard.edu/abs/2002AJ....123..485S">EDR
+paper</a>.</dd>
+
+<dt id="ellipticity">Ellipticity</dt>
+
+<dd><p>Measures how elliptical an object in the imaging data is. In
+the SDSS, we have numerous methods to measure this:</p>
+<ul>
+<li>the <a href="drXX/help/glossary.php#stokes">Stokes parameters</a></li>
+<li>the <a href="drXX/help/glossary.php#adaptive_moment">adaptive moments</a></li>
+<li>fits to <a href="drXX/help/glossary.php#dev">De&nbsp;Vaucouleurs profiles</a></li>
+<li>fits to <a href="drXX/help/glossary.php#exp">exponential profiles</a></li>
+<li>the isophotal parameters (discontinued)</li>
+</ul></dd>
+
+<dt id="eta">eta (&eta;)</dt>
+
+<dd>Latitude in the
+<a href="drXX/help/glossary.php#survey_coords">survey coordinate system</a>.
+Eta is the angle between the survey equator and the great circle passing
+through the point perpendicular to the survey meridian, positive to the north.
+Constant latitude curves are great circles. See the description of <a
+href="drXX/algorithms/surveycoords.php">SDSS survey
+coordinates</a>.</dd>
+
+<dt id="exp">Exponential Model</dt>
+
+<dd><p>The radial light distribution of a disk galaxy can often be fit by an exponential profile:</p>
+<p><var>I</var>(<var>r</var>) = <var>I</var><sub>0</sub>&nbsp;exp(-1.68&nbsp;<var>r</var>/<var>r</var><sub>e</sub>)</p>
+<p>The number 1.68 is chosen so that the model radius is a half-light radius.
+An elliptical version of this profile is fit to every detected object,
+yielding the <code>exp</code> parameters. See the
+<a href="drXX/algorithms/magnitudes.php#mag_model">model magnitude section</a>
+of the photometry algorithm page for details.</p>
+</dd>
+
+<dt id="extinction">Extinction</dt>
+
+<dd>We observe all but the nearest stars through a foreground of dust
+extinction from our own Milky Way. The CAS tabulates extinction corrections
+in magnitudes at the position of each object, <code>reddening</code>,
+following
+<a href="http://adsabs.harvard.edu/abs/1998ApJ...500..525S">Schlegel, Finkbeiner &amp; Davis (1998)</a>.
+For the APOGEE survey, which focuses on the most dust-obscured regions of the Galaxy disk and bulge, see
+the discussion of extinction in the <a href="drXX/irspec/targets.php">Infrared Spectra Targets</a> pages,
+and references therin.</dd>
+
+<dt id="extra_plates">Extra Plates</dt>
+
+<dd>Reobservations of main survey plates, useful for variability studies or checks. See the
+<a href="drXX/scope.php">scope</a> page for more information.</dd>
+
+<!-- FFFFF -->
+
+<dt id="family">Family Objects</dt>
+
+<dd>These are objects that are generated when photometric objects are neither primary nor secondary
+survey objects but a composite object that has been <a href="drXX/help/glossary.php#deblend">deblended</a> or the part
+of an object that has been deblended incorrectly (like the spiral arms of a galaxy). These objects
+are kept to track how the deblender is working.</dd>
+
+<dt id="fiber">Fiber</dt>
+
+<dd>The SDSS spectrograph uses optical fibers to direct the light at the focal
+plane from individual objects to the slithead. Each object is assigned a
+corresponding <code>fiberID</code>. The fibers for SDSS-I/II (and for
+SEGUE-2 in SDSS-III) were 3 arcsec in diameter in the source plane;
+they are 2 arcsec in diameter for BOSS and APOGEE. Each fiber is surrounded by a
+large sheath which prevents any pair of fibers from being placed closer
+than 55 arcsec on the same <a href="drXX/help/glossary.php#plate">plate</a>
+(62 arcsec for BOSS). The <a href="instruments/apogee_spectrograph.php">APOGEE
+spectrograph</a> employs 300 infrared fibers that each subtend 2 arcsec on the
+sky; no two fibers can be placed closer than 71.5 arcsec on a given
+plate.  When two targets are closer to each other than this
+separation, the highest-priority target is observed.  The other target
+may be observed if there is an overlapping plate covering this region.</dd>
+
+<dt id="fiberMag">fiberMag</dt>
+
+<dd>The magnitude measured by the frames pipeline to simulate the flux that
+would fall into a 3" fiber in typical seeing. Similarly, fiber2Mag
+simulates the 2" fiber magnitude.
+See <a href="drXX/help/glossary.php#mag_fiber">Magnitude, fiber</a>.</dd>
+
+<dt id="field">Field (Imaging)</dt>
+
+<dd>A field is a part of a <a href="drXX/help/glossary.php#camcol">camcol</a> that is processed
+by the <a href="drXX/help/glossary.php#photo">Photo pipeline</a> at one time. Fields are
+2048 &times; 1489 pixels; a field consists of the <a href="drXX/help/glossary.php#frame">frames</a>
+in the 5 filters for the same part of the sky. Fields overlap each
+other by 128 rows; <a href="drXX/help/glossary.php#primary">primaries</a> are decided when
+<a href="drXX/help/glossary.php#run">runs</a> are <a
+href="drXX/help/glossary.php#resolve">resolved</a> (basically, using
+objects between rows 64 and 1425 as primaries).
+See the <a
+href="drXX/algorithms/resolve.php">resolve algorithm documentation</a> for details.</dd>
+
+
+<dt id="field_apogee" class="10">Field (APOGEE)</dt>
+
+<dd>A <em>field</em> has a different meaning in the context of APOGEE
+infrared spectra than it does for imaging. In the
+context of APOGEE, a field is a location on the sky, defined by central coordinates and a radius.
+Fields can be identified by a string Field Name (e.g. <i>090+08</i>) or an integer
+LocationID (e.g. <i>4102</i>).</dd>
+
+
+<dt id="field-centers" class="10">Field Centers</dt>
+
+<dd>The coordinates of the centers of each <a href="drXX/help/glossary.php#field_apogee">APOGEE
+field</a>, expressed in galactic coordinates (L and B).</dd>
+
+<dt id="fieldid">fieldID</dt>
+
+<dd>The fieldID parameter is an integer uniquely identifying a detection
+in the photo catalog. It needs to be cast as unsigned
+64-bit, though in many files we waste a few bytes and write it as an
+string to avoid FITS compliance issues.
+The bits are assigned exactly as for <a href="drXX/help/glossary.php#objid">objid</a>,
+but setting the object id within the field to 0.
+For IDL users, the function <code>sdss_fieldid()</code> in photoop will convert
+RUN, CAMCOL, FIELD, RERUN into a properly formatted fieldID.</dd>
+
+<dt id="filter">Filter</dt>
+
+<dd>The SDSS imaging camera takes images in five filters:
+<em>u,g,r,i,z</em> which span the window from 3000 Angstroms to 1
+micron.  Please read the
+<a href="instruments/camera.php">camera page</a> for details.
+This term is used to describe both the physical
+filter and to tag parameters as measured through that filter.</dd>
+
+<dt id="FITS">FITS</dt>
+
+<dd>The Flexible Image Transport System, a standard method of storing
+astronomical data (both images and tables). FITS files are used extensively
+in the SAS.  The FITS format has a <a href="http://fits.gsfc.nasa.gov/">home page</a>.</dd>
+
+<dt id="flag">Flag</dt>
+<dd>A bitmask used in the database to specify various properties of an object
+in the imaging data. There are many flags in the SDSS catalogs, indicating,
+for example, whether the object was
+<a href="drXX/help/glossary.php#deblend">deblended</a> or saturated. There are
+status flags set by PSP, and by survey operations, on a
+frame-by-frame basis, describing the quality of the PSF, and the
+quality of the data overall.  Each object is given status flags
+that sort out overlaps.  The spectra have flags at two levels
+as well: pixel-by-pixel flags, and warning flags accompanying the
+redshifts and classification to indicate trouble.
+There is extensive documentation of the image processing flags at the
+<a href="drXX/algorithms/photo_flags_recommend.php">flags recommendation page</a>.  The
+spectroscopic data are accompanied by their own set of flags. APOGEE also employs
+unique data and targeting flags. A full list of values for each flag is
+given in the <a href="drXX/algorithms/bitmasks.php">Bitmasks</a> pages.</dd>
+
+<dt id="FNAL">FNAL</dt>
+
+<dd>Fermi National Accelerator Laboratory, one of the participating
+institutions in SDSS-I/II. Their homepage is
+<a href="http://www.fnal.gov">http://www.fnal.gov</a>.</dd>
+
+<dt id="footprint">Footprint</dt>
+
+<dd>The area on the sky covered by the SDSS imaging and spectroscopy (both
+optical and infrared). The footprint is described on the
+<a href="drXX/scope.php">scope page</a>.</dd>
+
+<dt id="fpAtlas">fpAtlas file</dt>
+
+<dd>A FITS binary table containing the
+<a href="drXX/help/glossary.php#atlas_image">atlas images</a> for all objects
+detected in all five filters in a single
+<a href="drXX/help/glossary.php#field">field</a>. Requires special software to
+decode into individual FITS images for each object. The FITS images are
+available in the <a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="fpBin">fpBin file</dt>
+
+<dd>See <a href="drXX/help/glossary.php#binned_frame">binned frame</a>.</dd>
+
+<dt id="fpC">fpC file</dt>
+
+<dd>An uncalibrated version of a <a
+href="drXX/help/glossary.php#corrected_frame">corrected frame</a>. Note that
+while in DR7 and previous the fpC files were the only version of
+corrected frames released, in DR8 and later the fpC files are
+discontinued in favor of the fully calibrated corrected frames.</dd>
+
+<dt id="fpFieldStat">fpFieldStat file</dt>
+
+<dd>A FITS binary table containing a statistical summary of the results
+of the <a href="drXX/help/glossary.php#frames_pipeline">frames pipeline</a> for
+one <a href="drXX/help/glossary.php#field">field</a> for a single frames pipeline
+run. This information is also found in the Field table in the
+<a href="drXX/help/glossary.php#CAS">CAS</a> database. Available in the
+<a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="fpM">fpM file</dt>
+
+<dd>See <a href="drXX/help/glossary.php#mask_frame">mask frame</a>.</dd>
+
+<dt id="fpObjc">fpObjc file</dt>
+
+<dd>These are FITS binary tables containing catalogs of detected objects
+output by the <a href="drXX/help/glossary.php#frames_pipeline">frames pipeline</a>.
+These are <em>uncalibrated</em>, and thus present positions in pixel
+coordinates, and counts, not fluxes. Available in the
+<a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="frame">Frame</dt>
+
+<dd>The data stream from a single CCD in a scanline is cut into a series of
+frames which measure 2048 &times; 1489 pixels and overlap 10% with the adjacent
+frame. The frames in the 5 filters for the same part of the sky are called a
+<a href="drXX/help/glossary.php#field">field</a>.</dd>
+
+<dt id="frames_pipeline">Frames Pipeline</dt>
+
+<dd>This is the core of the image processing of SDSS image data.  In this
+pipeline, the images are  bias-subtracted and flat-fielded, and bad columns,
+cosmic rays, and bleed trails are interpolated over. This yields
+<a href="drXX/help/glossary.php#corrected_frame">corrected frames</a>.  Then
+objects are found by running a PSF-matched filter over the image, and matched
+between the five frames making up a field.  A
+<a href="drXX/help/glossary.php#deblend">deblender</a> is run to resolve
+overlaps, and the properties of each object are measured and written to the
+<a href="drXX/help/glossary.php#fpObjc">fpObjc</a> files.  Atlas images are written
+to the <a href="drXX/help/glossary.php#fpAtlas">fpAtlas</a> files.</dd>
+
+<dt id="fundamental_standard">Fundamental Standard</dt>
+
+<dd>The photometry of the primary standard stars is ultimately tied to the
+SED of the star BD&nbsp;17&nbsp;+4708, which is the fundamental standard for the SDSS
+photometric system.  See the
+<a href="http://adsabs.harvard.edu/abs/2002AJ....123.2121S">Smith et al. (2002) AJ paper</a>
+for more details.</dd>
+
+<!-- GGGGG -->
+
+<dt id="gnats" class="7">GNATS</dt>
+
+<dd>The system used to report and track bugs and issues with SDSS hardware
+and software; for collaboration use only.</dd>
+
+<dt id="galaxyzoo">Galaxy Zoo</dt>
+
+<dd>An international program whereby laypeople from all over the world contribute
+visual classifications of galaxies, based on SDSS images.  These
+classifications are made available in DR10.  More details may be found
+at their <a href="http://www.galaxyzoo.org/">website</a>.</dd>
+
+<dt id="great_circle_coords">Great Circle Coordinates</dt>
+
+<dd>
+<p>One of the main coordinate systems utilized by the SDSS. In this system,
+<a href="drXX/help/glossary.php#mu">&mu;</a> and <a href="drXX/glossary.php#nu">&nu;</a>
+are spherical coordinates (corresponding to ra and dec) in a system whose
+equator is along the center of the
+<a href="drXX/help/glossary.php#stripe">stripe</a> in question. The stripes of the
+main survey in the Northern Galactic Cap are great circles which all cross at
+the survey nodes of (RA, Dec) = (95, 0) an (RA, Dec) = (270, 0) degrees.</p>
+
+<p>The scans are defined by their inclination with respect to the equator, and are indexed
+by integers <var>n</var> such that the inclination of a stripe is
+-25 + 2.5<var>n</var>.</p>
+
+<p>The stripes of the main survey in the South Galactic cap are great circles
+with the same nodes, where the indexing is such that the inclination relative
+to the equator is 2.5(82 - <var>n</var>). The celestial Equator therefore corresponds
+to stripe number 10 in the Northern Cap and 82 in the Southern Cap.  Stripes 1-44 were
+observed in the North, and stripes 61 to 90 in the South.
+While the imaging scans of the SEGUE survey are also great circles, they have
+an assortment of different nodes and are numbered with stripe numbers &gt; 200.</p>
+
+<p>See also the description of <a href="drXX/algorithms/surveycoords.php">SDSS survey coordinates</a>.</p>
+</dd>
+
+<!-- HHHHH -->
+
+<dt id="The_Hammer">The Hammer</dt>
+
+<dd>The Hammer is the name of a piece of code developed by the University of
+Washington red star analysis team to provide accurate spectral types
+and other information for red stars (generally redder than spectral type K,
+extending through types M, L and T) observed in SDSS and SEGUE.  The
+spectral type classifier
+output of the Hammer is provided in the sppParams table of the CAS
+for each star in the database.  The Hammer provides the best classification
+information for redder stars.</dd>
+
+<dt id="htm">HTM</dt>
+
+<dd>The Hierarchical Triangular Mesh (HTM) is a partitioning scheme to
+divide the surface of the unit sphere into spherical triangles. It is a
+hierarchical scheme and the subdivisions have roughly equal areas. HTM is
+used to index the coordinates in the object databases for faster querying
+speeds. For more details, and downloadable software, see the
+<a href="http://www.sdss.jhu.edu/htm/">HTM Website</a>.</dd>
+
+<dt id="hoggpt">HoggPT</dt>
+
+<dd>A computer program which ran at Apache Point Observatory, which used information
+from the <a href="drXX/help/glossary.php#photo_tel">photometric telescope</a> and
+the <a href="drXX/help/glossary.php#cloud_cam">cloud camera</a> to determine the
+photometricity of a given night.  It was written by David Hogg and
+colleagues, and is described in a
+<a href="http://adsabs.harvard.edu/abs/2001AJ....122.2129H">paper</a>.</dd>
+
+<!-- IIIII -->
+
+<dt id="idlspec2d">idlspec2d</dt>
+
+<dd>
+<p>The spectroscopic pipeline (also sometimes referred to as
+Spectro-2D and <code>specBS</code>), which reduces the raw 2D spectral
+frames to extracted 1D calibrated spectra (flux density versus wavelength) and then to
+redshifts and classifications. </p>
+
+<p>The operational goals of the extraction pipeline are to:</p>
+
+<ol>
+<li>interpolate over bad pixels</li>
+<li>mask all bad pixels and pixels contaminated by strong sky emission.</li>
+<li>bias and dark subtract the raw 2D data frames</li>
+<li>trim the frame</li>
+<li>flat-field  using calibration frames taken at
+the same telescope pointing position before and after an exposure
+on the sky.</li>
+<li>optimally extract 1D spectra from this 2D frame.</li>
+<li>apply wavelength calibration, rebin to a common
+wavelength solution, and sky subtract.</li>
+<li>coadd the three or more individual exposures for each
+object.</li>
+<li>put the red and blue halves of the spectrum together.</li>
+<li>flux calibrate the spectrum.</li>
+</ol>
+
+<p>Following extraction, the <code>idlspec2d</code> pipeline
+classifies objects and measures redshifts from the Legacy, SEGUE and
+BOSS surveys based on the calibrated 1-dimensional spectra. It fits
+spectra to templates in real space, as described in the <a
+href="drXX/algorithms/redshifts.php">redshift fitting algorithms
+documentation</a>.  This aspect of the <code>idlspec2d</code> has
+sometimes been referred to as "specBS".</p>
+
+<p>For SDSS-I/II, there was another pipeline, spec1d, which
+cross-correlated spectra to templates in Fourier space; that pipeline
+is not being run in SDSS-III.</p>
+</dd>
+
+<dt id="IOP" class="7">IOP</dt>
+
+<dd>Imaging Observers Program. The software that runs the
+<a href="drXX/help/glossary.php#camera">imaging camera</a> on the survey telescope.</dd>
+
+<dt id="IPMU">IPMU</dt>
+
+<dd>Institute for the Physics and Mathematics of the Universe, a branch of
+the University of Tokyo, one of the participating institutions in SDSS-III.</dd>
+
+<dt id="IS_BEST">IS_BEST</dt>
+
+<dd>The IS_BEST flag is set for each SDSS/BOSS spectroscopic
+observation (labeled by its MJD) of each plate. It is "1" if we
+consider that MJD to be the best observation of that plate, "0"
+otherwise.
+</dd>
+
+<dt id="IS_PRIMARY">IS_PRIMARY</dt>
+
+<dd>The IS_PRIMARY flag is set for each SDSS/BOSS spectroscopic
+observation (labeled by its MJD) of each plate. It is "1" if we
+consider that MJD to be the best observation of that plate, and for it
+to be an acceptable observation from a science point of view (with
+PLATEQUALITY either 'marginal' or 'good'). It is "0" either if there
+is a better observation or if all observations are labeled 'bad'. A
+clean set of plates can be selected by demanding that IS_PRIMARY be
+equal to one.  Note, however, that just because a plate is marked
+'bad' does not always mean its spectra are useless. </dd>
+
+<dt id="IS_TILE">IS_TILE</dt>
+
+<dd>The IS_TILE flag is set for each SDSS/BOSS spectroscopic
+observation (labeled by its MJD) of each plate. It is "1" if we
+consider that PLATE-MJD to be the best instance of the TILE it is
+associated with in the SDSS Legacy survey.  Tiles are unique RA/Dec
+centers.  It is "0" otherwise, or if the plate is not associated with
+Legacy.  To get well-defined targeting and window functions, one wants
+to use only plates that have IS_TILE of 1.  A plate can be IS_TILE
+only if it is also IS_PRIMARY.</dd>
+
+
+<!-- JJJJJ -->
+
+<dt id="JHU">JHU</dt>
+
+<dd>Johns Hopkins University, one of the participating institutions in
+SDSS. The SDSS JHU homepage is
+<a href="http://www.sdss.jhu.edu">http://www.sdss.jhu.edu</a>.</dd>
+
+<dt id="JPG" class="7">JPG</dt>
+
+<dd>Japan Participation Group, one of the participating institutions in SDSS.
+Their homepage is
+<a href="http://indus.astron.s.u-tokyo.ac.jp/works/SDSS/sdss.html">http://indus.astron.s.u-tokyo.ac.jp/works/SDSS/sdss.html</a>.</dd>
+
+<!-- KKKKK -->
+
+<!-- LLLLL -->
+
+<dt id="lambda">lambda (&lambda;)</dt>
+
+<dd>One of the coordinates of the
+<a href="drXX/help/glossary.php#survey_coords">survey coordinate system</a>.
+The stripe longitude &lambda; is measured from the survey
+central meridian positive to the east along the great circles
+perpendicular to that meridian. Constant longitude curves are circles
+centered on the survey poles. See the description of <a
+href="drXX/algorithms/surveycoords.php">SDSS survey coordinates</a>.</dd>
+<!-- <a href="drXX/help/glossary.php#poles">survey poles</a>.</dd> -->
+
+<dt id="legacy">Legacy</dt>
+
+<dd>One of the three surveys that comprise the second phase
+<a href="drXX/help/glossary.php#sdss2">(SDSS-II)</a>
+of the <a href="drXX/help/glossary.php#sdss">Sloan Digital Sky Survey (SDSS)</a>.
+It completes the SDSS-I survey of the extragalactic universe.  SDSS-I plus Legacy
+obtained images and redshifts of a million galaxies and quasars over a
+contiguous 7500 deg<sup>2</sup> in the Northern Galactic Cap, and three
+stripes in the Southern Galactic Cap.</dd>
+
+<dt id="legacyprimary">Legacy primary</dt>
+
+<dd>Spectra that are unique observations of a location on the sky,
+within the full set of Legacy plates, are labeled as
+<code>legacyPrimary</code> in the CAS (called <code>speclegacy</code>
+in the flatfiles on SAS).  There are several criteria used to
+determine whether the legacyPrimary flag should be set to 1 for an
+object in the SpecObjAll table, described in the <a
+href="drXX/spectro/catalogs.php#unique">spectroscopic catalog
+documentation</a>. This flag is a special version of the <a
+href="drXX/help/glossary.php#scienceprimary">science primary</a> flag, which
+uses all plates.</dd>
+
+<dt id="location_id" class="10">Location ID</dt>
+
+<dd>In APOGEE, a unique integer assigned to each <a href="drXX/help/glossary.php#field_apogee">APOGEE field</a>
+on the sky.</dd>
+
+<dt id="LOWZ">LOWZ</dt>
+
+<dd>A sample of galaxies targeted for spectroscopic followup in the BOSS survey.  It is
+designed to select red galaxies in the redshift range 0.15 &lt; z &lt; 0.4, with a roughly
+uniform space density of 3 &times; 10<sup>-4</sup> [h/Mpc]<sup>3</sup>).  It is similar
+to the LRG sample used in the SDSS-I/II Legacy survey, but extends to lower luminosities.
+See also <a href="drXX/help/glossary.php#CMASS">CMASS</a> and
+<a href="drXX/help/glossary.php#luminous_red_galaxy">luminous red galaxy</a>.</dd>
+
+<dt id="luminous_red_galaxy">Luminous Red Galaxy</dt>
+
+<dd>SDSS luminous red galaxies (LRGs) are selected on the basis of color and magnitude to yield a
+sample of luminous intrinsically red galaxies that extends fainter and farther than the
+<a href="drXX/help/glossary.php#main_sample">SDSS main galaxy sample</a>.
+See <a href="http://adsabs.harvard.edu/abs/2001AJ....122.2267E">Eisenstein et al. (2001)</a>
+for detailed discussions of sample selection, efficiency, use, and caveats.</dd>
+
+<dt id="luptitude">Luptitude</dt>
+
+<dd>An informal name for the <a href="drXX/help/glossary.php#asinh">asinh magnitude</a>.</dd>
+
+<!-- MMMMM -->
+
+<dt id="maggie">Maggie</dt>
+
+<dd>A <em>maggie</em> is a linear measure of flux density; one maggie has an AB
+magnitude of 0, or a flux density of 3631&nbsp;Jansky in any band.
+In SDSS-III, all brightnesses are made available in units of maggies,
+as well as AB magnitudes.</dd>
+
+<dt id="mag_cmodel">Magnitude, cmodel</dt>
+
+<dd>Composite model magnitude. The magnitude obtained from the
+best-fitting linear combination of the best-fitting de&nbsp;Vaucouleurs and
+exponential model for an object's light profile (cf. <a
+href="drXX/help/glossary.php#mag_model">magnitude, model</a>). See <a
+href="drXX/algorithms/magnitudes.php#cmodel">cmodel magnitude
+description</a> in Photometry section of the Algorithms pages.</dd>
+
+<dt id="mag_fiber">Magnitude, fiber</dt>
+
+<dd>The flux contained within the aperture of a
+<a href="drXX/help/glossary.php#fiber">spectroscopic fiber</a> (3" in diameter) is
+calculated by the frames pipeline in each band and stored in
+<code>fiberMag</code>. There is also a 2" fiber magnitude (<code>fiber2Mag</code>),
+matching the size of the BOSS fibers. Details can be found in the
+<a href="drXX/algorithms/magnitudes.php#mag_fiber">Photometry section</a> of the Algorithms pages.</dd>
+
+<dt id="mag_model">Magnitude, model</dt>
+
+<dd>
+<p>Just as the <a href="drXX/help/glossary.php#mag_psf">PSF magnitudes</a> are
+optimal measures of the fluxes of stars, the optimal measure of the flux of a
+galaxy would use a matched galaxy model.  With this in mind, the code fits two
+models of arbitrary ellipticity to the two-dimensional image of each object in
+each band:</p>
+<ol>
+<li>a pure de&nbsp;Vaucouleurs profile, and</li>
+<li>a pure exponential profile,</li>
+</ol>
+<p>both convolved with the local PSF. The best-fit model in the r-band is fit
+to the other four bands; the results are stored as the model magnitudes.
+Details
+can be found in the
+<a href="drXX/algorithms/magnitudes.php#mag_model">Photometry section</a>
+of the Algorithms pages.</p>
+</dd>
+
+<dt id="mag_petro">Magnitude, Petrosian</dt>
+
+<dd>Stored as <code>petroMag</code>. For galaxy photometry, measuring flux
+is more difficult than for stars, because galaxies do not all have the same radial surface
+brightness profile, and have no sharp edges.  In order to avoid
+biases, we wish to measure a constant fraction of the total light,
+independent of the position and distance of the object. To satisfy these
+requirements, the SDSS has adopted a modified form of the
+<a href="http://adsabs.harvard.edu/abs/1976ApJ...209L...1P">Petrosian (1976)</a>
+system, measuring galaxy fluxes within a circular aperture whose radius is
+defined by the shape of the azimuthally averaged light profile.
+Details can be found in the
+<a href="drXX/algorithms/magnitudes.php#mag_petro">Photometry section</a> of
+the Algorithms pages and the
+<a href="http://adsabs.harvard.edu/abs/2002AJ....124.1810S">Strauss et al. (2002) AJ paper</a>
+on galaxy target selection.  Model magnitudes share most of the advantages of
+Petrosian magnitudes, and have higher S/N; they are therefore used instead of
+Petrosian magnitudes for target selection in BOSS.</dd>
+
+<dt id="mag_pogson">Magnitude, Pogson</dt>
+
+<dd>
+<p>The Pogson magnitude is the standard
+astronomical magnitude system, where one increment in magnitude is an
+increase in brightness by the fifth root of 100.  A star of 1st
+magnitude is therefore 100 times as bright as a star of 6th
+magnitude. That is, for two objects</p>
+<p><var>M</var><sub>1</sub> - <var>M</var><sub>2</sub> = -2.5 log(<var>F</var><sub>1</sub>/<var>F</var><sub>2</sub>)</p>
+<p>where <var>M</var><sub>1</sub> and <var>M</var><sub>2</sub> are the magnitudes of two
+objects, and <var>F</var><sub>1</sub> and <var>F</var><sub>2</sub> are their luminous fluxes.</p>
+</dd>
+
+<dt id="mag_psf">Magnitude, PSF</dt>
+
+<dd>Stored as <code>psfMag</code>. For isolated stars, which are
+well-described by the point spread function (PSF), the optimal
+measure of the total flux is determined by fitting a PSF model to the
+object.  Details can be found in the
+<a href="drXX/algorithms/magnitudes.php#mag_psf">Photometry section</a> of
+the Algorithms pages.</dd>
+
+<dt id="main_sample">Main Sample</dt>
+
+<dd>The Main Galaxy Sample is a complete tiled spectroscopic sample of
+galaxies observed as part of the Legacy survey in SDSS-I/II, consisting of
+objects brighter than Petrosian <var>r</var> &lt; 17.77.  The main galaxy sample
+target selection algorithm is detailed in
+<a href="http://adsabs.harvard.edu/abs/2002AJ....124.1810S">Strauss et al. (2002)</a>.</dd>
+
+<dt id="mangle">mangle</dt>
+
+<dd>Software tool used to track the detailed geometry of the sky coverage of the SDSS
+large-scale structure samples, both imaging and spectroscopy (especially the
+<a href="drXX/help/glossary.php#legacy">Legacy</a> and
+<a href="drXX/help/glossary.php#BOSS">BOSS</a> surveys). It is based on spherical
+polygons, analogous to those used by the CAS region tools and footprint server.
+Molly Swanson has put together a
+<a href="http://space.mit.edu/~molly/mangle/">useful webpage</a> describing
+it.</dd>
+
+<dt id="MARVELS">MARVELS</dt>
+
+<dd>The Multi-object APO Radial Velocity Exoplanet Large-area Survey,
+one of the four surveys making up SDSS-III, uses a
+sixty-object fiber-fed spectrograph to repeatedly observe bright stars to
+detect the radial velocity variations caused by orbiting planets. The spectrograph
+uses an innovative fixed-delay interferometer.</dd>
+
+<dt id="mask">Mask</dt>
+
+<dd>Regions of data that are excluded from analysis. For example, some wavelength regions in the
+spectra may be masked out, some pixels in the photometric images may suffer from cosmic rays and
+so are masked out, and some parts of the sky (<em>e.g.</em> around bright stars) may be masked.</dd>
+
+<dt id="mask_frame">Mask Frame</dt>
+
+<dd>A binary FITS table corresponding to a corrected image frame, showing
+mask bits associated with each pixel. The mask values are described in
+Table 8 of the <a
+href="http://adsabs.harvard.edu/abs/2002AJ....123..485S">EDR paper</a>.
+Available in the <a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="MAST" class="7">MAST</dt>
+
+<dd>The Multimission Archive at Space Telescope. Data from a variety of space
+missions and ground-based telescopes is provided, including the Sloan
+<a href="drXX/help/glossary.php#EDR">EDR</a>. The site is located
+<a href="http://archive.stsci.edu/">here</a>.</dd>
+
+<dt id="mjd">MJD</dt>
+
+<dd>Modified Julian Date, used to indicate the date that a given piece of
+SDSS data (image or spectrum) was taken.</dd>
+
+<dt id="modelMag">modelMag</dt>
+
+<dd>The model magnitude. See <a href="drXX/help/glossary.php#mag_model">magnitude, model</a>.</dd>
+
+<dt id="monitor" class="7">Monitor Telescope (MT)</dt>
+
+<dd>The previous incarnation of the
+<a href="drXX/help/glossary.php#photo_tel">Photometric Telescope (PT)</a>.</dd>
+
+<dt id="MT_field" class="7">MT field</dt>
+
+<dd>See <a href="drXX/help/glossary.php#secondary_patch">secondary patch</a>.</dd>
+
+<dt id="mtpipe" class="7">mtpipe</dt>
+
+<dd>The pipeline for processing data from the
+<a href="drXX/help/glossary.php#photo_tel">Photometric Telescope</a>.
+A description can be found in the
+<a href="http://adsabs.harvard.edu/abs/2002AJ....123..485S">appropriate
+section of the EDR paper</a>.</dd>
+
+<dt id="mu">mu (&mu;)</dt>
+
+<dd>One of the coordinates in the SDSS
+<a href="drXX/help/glossary.php#great_circle_coords">great circle coordinate system</a>.
+Mu corresponds to RA, or longitude. See the description of <a
+href="drXX/algorithms/surveycoords.php">SDSS survey coordinates</a>.</dd>
+
+<!-- NNNNN -->
+
+<dt id="nanomaggie">nanomaggie</dt>
+
+<dd>A linear unit of flux density equal to 10<sup>-9</sup> <a
+href="drXX/help/glossary.php#maggie"> maggies</a>.  A star of brightness 1 nanomaggie
+has a magnitude of 22.5 in any band, or a flux density of
+3.631 &times; 10<sup>-6</sup> Jansky.</dd>
+
+<dt id="nmgypercount">nmgypercount</dt>
+
+<dd>The conversion factor between counts and
+<a href="drXX/help/glossary.php#nanomaggie">nanomaggies</a>. It depends on the
+airmass and extinction terms of the calibration of the given location
+in the given <a href="drXX/help/glossary.php#field">field</a> of
+imaging data, as
+well as the flat-field for the filter at the epoch of the <a
+href="drXX/help/glossary.php#run">run</a> in
+question. It can be found in the <a
+href="drXX/help/glossary.php#photoobj">photoObj files or tables</a> for each
+object.</dd>
+
+<dt id="nfcalib" class="7">nfCalib</dt>
+
+<dd>The pipeline that uses the results of <a href="drXX/help/glossary.php#mtpipe">MTPipe</a> and
+<a href="drXX/help/glossary.php#Astrom">astrom</a> to apply the photometric
+and astrometric calibration to each object in the imaging data.  The data products are called nfCalib files.</dd>
+
+<dt id="normal_targets" class="10">Normal Targets</dt>
+
+<dd>APOGEE science targets selected with the data quality criteria, color and magnitude criteria, and
+magnitude sampling algorithms described in <a href="drXX/irspec/targets.php">APOGEE infrared spectra
+target selection</a> - in contrast with <a href="drXX/help/glossary.php#special_targets">special targets</a>. </dd>
+
+<dt id="nu">nu (&nu;)</dt>
+
+<dd>One of the coordinates in the SDSS
+<a href="drXX/help/glossary.php#great_circle_coords">great circle coordinate system</a>.
+Nu corresponds to Dec, or latitude. See the description of <a
+href="drXX/algorithms/surveycoords.php">SDSS survey coordinates</a>.</dd>
+
+<!-- OOOOO -->
+
+<dt id="object">Object</dt>
+
+<dd>Enumerates detected photometric objects within a given imaging
+<a href="drXX/help/glossary.php#field">field</a>. Thus, multiple fields
+may have objects with the same object number. In CAS, this
+identification number is named <code>obj</code> in the
+<code>photoObjAll</code> and related tables.  In the flatfiles in SAS,
+this identification number is named <code>id</code>.</dd>
+
+<dt id="objectivity" class="7">Objectivity</dt>
+
+<dd>A brand of object-oriented database used to
+initially serve the <a href="drXX/help/glossary.php#EDR">EDR</a> and to run <a
+href="drXX/help/glossary.php#OpDB">OpDB</a>.</dd>
+
+<dt id="ObjID">ObjID</dt>
+
+<dd>
+<p>A number identifying an object in the image catalog used by the CAS.  It is a
+bit-encoded integer of <a href="drXX/help/glossary.php#run">run</a>,
+<a href="drXX/help/glossary.php#rerun">rerun</a>,
+<a href="drXX/help/glossary.php#camcol">camcol</a>,
+<a href="drXX/help/glossary.php#field">field</a>,
+<a href="drXX/help/glossary.php#object">object</a>.  Note that when the data are
+reprocessed (rerun), the object identification changes, so that the
+ObjID value in DR8 and DR9 differ from that of previous data releases.
+For spectroscopic objects, there are two possible choices for the matching
+photometric measurement: <code>bestObjID</code> corresponds to the
+"flux-based" match, which is the object that contributes the most
+light at the location of the fiber; <code>origObjID</code> corresponds
+to the "position-based" match, which is the object whose center is
+closest to the fiber. In a fraction of a percent of cases, these two
+identifications differ. We also provide <code>targetObjID</code>,
+which is the object identification number corresponding to the object
+that was originally targeted (virtually always in a previous rerun,
+which we do not include in the DR8 and DR9 releases).</p>
+
+<p>The bits are assigned in objid as follows:</p>
+<ul>
+<li> <b>63</b>: 0, unassigned</li>
+<li> <b>59-62</b>: skyVersion 	resolved sky version (for DR8 only
+use 2; 0-15 available)</li>
+<li> <b>48-58</b>: rerun, number of pipeline rerun </li>
+<li> <b>32-47</b>: run, run number</li>
+<li> <b>29-31</b>: camcol, camera column (1-6)</li>
+<li> <b>28</b>: 0, unassigned</li>
+<li> <b>16-27</b>: field, field number within run</li>
+<li> <b>0-15</b>: id, object number within field</li>
+</ul>
+<p>For IDL users, the function "sdss_objid()" in the <a
+href="drXX/software/">photoop package distributed with DR9</a> will
+convert RUN, CAMCOL, FIELD, ID, RERUN into a properly formatted
+objID. The function "unwrap_objid()" will return the RUN, CAMCOL,
+FIELD, ID, RERUN corresponding to a given objID.</p>
+
+<p>For Python users, the
+<a href="http://code.google.com/p/sdsspy/">sdsspy</a> package
+provides "sdsspy.util.objid()" and "sdsspy.util.photoid_extract()" to
+convert RUN, CAMCOL, FIELD, ID, RERUN into objID and back,
+respectively.
+</p>
+
+<p>In the CAS, there is a database function
+<code>fObjIDFromSDSS()</code> which will convert RUN, CAMCOL, FIELD,
+ID, RERUN into a properly formatted objID. The function
+<code>fSDSSFromObjID()</code> will return the RUN, CAMCOL, FIELD, ID,
+RERUN corresponding to a given objID.</p>
+
+<p>It needs to be cast as unsigned 64-bit, though in many files we
+waste a few bytes and write it as an string to avoid FITS compliance
+issues.</p>
+</dd>
+
+<dt id="OpDB" class="7">OpDB</dt>
+
+<dd>The survey's internal Operations Database at <a href="drXX/help/glossary.php#FNAL">FNAL</a>.</dd>
+
+<!-- PPPPP -->
+
+<dt id="par_file">Par (Parameter) File</dt>
+
+<dd>Also known as a Yanny parameter file. This is a simple ascii file format
+developed to store lists of parameters for the SDSS, such as the
+<a href="drXX/scope.php">plates and run lists in the scope page</a>.
+See <a href="drXX/software/par.php">the formal description</a>.</dd>
+
+<dt id="parent">Parent</dt>
+
+<dd>A product of the <a href="drXX/help/glossary.php#deblend">deblending</a>
+process. When two objects are near each other on the sky, their images may
+appear merged. The deblender tries to split this merged image; the initial
+merged image is called a parent, while the resulting sub-images are called
+<a href="drXX/help/glossary.php#child">children</a>. For more details, see the
+<a href="drXX/algorithms/deblend.php">Deblending</a> section of the
+<a href="drXX/algorithms/">algorithms pages</a>.</dd>
+
+<dt id="particip">Participating Institution</dt>
+
+<dd>One of the institutions involved in the survey. These institutions
+have contributed hardware, software, manpower, or financial support to the
+survey, and thus have pre-public access to data.</dd>
+
+<dt id="petromag">petroMag</dt>
+
+<dd>The Petrosian magnitude. See
+<a href="drXX/help/glossary.php#mag_petro">Magnitude, Petrosian</a>.</dd>
+
+<dt id="petrorad">petroRad</dt>
+
+<dd>The Petrosian radius. A measure of the angular size of an image, most meaningful for galaxies.
+Units are seconds of arc. The Petrosian radius (and related measures of size called petroR50
+and petroR90) are derived from the surface brightness profile of the galaxy, as described
+in <a href="drXX/algorithms/">Algorithms</a>.</dd>
+
+<dt id="photo">Photometric Pipeline (<code>Photo</code>)</dt>
+
+<dd>A series of linked pipelines
+(<a href="drXX/help/glossary.php#ssc">Serial Stamp Collecting pipeline, SSC</a>;
+<a href="drXX/help/glossary.php#psp">Postage Stamp Pipeline, PSP</a>, and
+<a href="drXX/help/glossary.php#frames_pipeline">Frames</a>) which analyze the raw
+image data, including bias subtraction, sky and PSF determination,
+flat-fielding, and finding and measuring the properties of objects.  The
+astrometric and photometric calibration is carried out with the
+<a href="drXX/help/glossary.php#Astrom">astrometric pipeline</a> and
+<a href="drXX/help/glossary.php#ubercal">ubercalibration</a>. We provide in
+the imaging section an <a href="drXX/imaging/pipeline.php">outline of
+the photometric pipeline and its data products</a>.</dd>
+
+<dt id="photo_tel">Photometric Telescope</dt>
+
+<dd>Also abbreviated PT. A 0.5-meter telescope that was used in SDSS-I/II for
+monitoring the transmission of the atmosphere during the course of the survey
+and photometrically calibrating the 2.5m image data.  In SDSS-III,
+photometric calibration has been carried out instead with the
+<a href="drXX/help/glossary.php#ubercal">Ubercalibration</a>
+process, which uses overlaps between scanlines to tie the survey together
+photometrically.</dd>
+
+<dt id="photoobj">PhotoObj</dt>
+
+<dd>The fits binary tables containing photometrically and astrometrically
+calibrated quantities from the imaging
+pipeline.  Available in the <a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="phototag">photoTag</dt>
+
+<dd>A table in the <a href="drXX/help/glossary.php#CAS">CAS</a> that includes
+only the most frequently accessed PhotoObj columns. GalaxyTag and StarTag
+are views of PhotoTag that contain only Primary extended images and point-like
+images, respectively. None of these tables and views contain spectroscopic
+information.</dd>
+
+<dt id="photoz">photoZ</dt>
+
+<dd>The photometric redshift. The measured colors of galaxies and quasars
+are observed to depend on their redshift, as the spectral energy distribution
+of the object moves through the filters.  This allows the redshift to be
+estimated from the measured colors, in the absence of a spectrum. Photometric
+redshifts have larger random and systematic errors than spectroscopic
+redshifts, but they can be obtained for fainter and thus many more galaxies
+and quasars. They have been estimated using two different techniques
+for galaxies in SDSS image data, and are available in the CAS.
+</dd>
+
+<dt id="plate">Plate</dt>
+
+<dd>Each spectroscopic exposure employs a large, thin, circular metal plate
+that positions optical fibers via holes drilled at the locations of the
+images in the telescope focal plane. These fibers then feed into the
+spectrographs.  Each plate has a unique serial number, which is called
+<em>plate</em> in views such as SpecObj in the CAS. In APOGEE data in DR10
+and later, note that while "plate" is commonly used interchangeably with
+<a href="drXX/help/glossary.php#design">Design</a>, multiple plates may exist
+for the same design (i.e. for the same set of stars). For example, two plates may
+have identical targets but be drilled for observations at different hour angles,
+temperatures, or epochs, thereby making them unique plates with
+different <a href="drXX/help/glossary.php#plate_id">Plate IDs</a>.</dd>
+
+<dt id="plate_id">Plate ID</dt>
+
+<dd>A unique integer assigned to each spectroscopic plate in SDSS,
+SEGUE, BOSS, or APOGEE.</dd>
+
+<dt id="plate_map">Plate Mapper</dt>
+
+<dd>An instrument that maps which plugged
+<a href="drXX/help/glossary.php#fiber">fiber</a> corresponds to which target object.
+The 640 fibers (for SDSS-I/II, and SEGUE-2), 1000 fibers (BOSS), or
+300 fibers (APOGEE) of the
+<a href="drXX/help/glossary.php#spectrograph">spectrograph</a> are placed by hand
+without regard to which fiber corresponds to which position. An automated
+fiber mapper resolves this object-to-fiber match-up by scanning lasers across
+the terminal ends of the fibers and observing where they "light up" on the
+focal plane.</dd>
+
+<dt id="platequality">plateQuality</dt>
+
+<dd>The PLATEQUALITY string is set for each SDSS/BOSS spectroscopic
+observation (labeled by its MJD) of each plate. The conditions for
+	setting this quality indicator are described in the documentation
+	for the <a href="drXX/spectro/catalogs.php">optical spectroscopic
+		catalogs</a>.
+</dd>
+
+<dt id="psf">Point Spread Function (PSF)</dt>
+
+<dd>The detailed shape of the response of the
+atmosphere, telescope plus instrument to a star.  It varies with position, filter,
+and time, due to changes in the atmosphere and the optics of the
+telescope.  In the image processing pipeline, it is measured by the
+<a href="drXX/help/glossary.php#psp">PSP</a>, and
+used extensively in determining each objects' properties.</dd>
+
+<dt id="poles">Poles</dt>
+
+<dd>SDSS uses a number of coordinate systems to describe positions on the sky.
+These are spherical polar coordinates, where great circles are lines of
+longitude that converge at the poles. Specifying the location of the poles on
+the sky is part of the definition of the coordinate system.</dd>
+
+<dt id="psp">Postage Stamp pipeline (PSP)</dt>
+
+<dd>This pipeline determines for an imaging <a href="drXX/help/glossary.php#run">run</a>
+the background sky, the flat-field, and the spatially varying Point
+Spread Function (PSF) in each CCD, all of which will be used by
+the <a href="drXX/help/glossary.php#frames_pipeline">Frames pipeline</a>.</dd>
+
+<dt id="primary">Primary (object)</dt>
+
+<dd>Generically, the "main" observation given multiple observations of
+an object, either in spectroscopy or photometry.  For spectroscopy,
+see <a href="drXX/help/glossary.php#scienceprimary">science primary</a>,
+<a href="drXX/help/glossary.php#legacyprimary">legacy primary</a>,
+and <a href="drXX/help/glossary.php#legacyprimary">SEGUE primary</a>. For
+imaging, see
+<a href="drXX/help/glossary.php#surveyprimary">survey primary</a> and
+<a href="drXX/help/glossary.php#runprimary">run primary</a>.
+</dd>
+
+<dt id="primary_standard">Primary Standard</dt>
+
+<dd>One of the 158 stars on the SDSS photometric system that was
+observed by the <a href="drXX/help/glossary.php#photo_tel">Photometric
+Telescope (PT)</a> to measure the extinction of a given night, and
+which is used to calibrate the magnitudes of the secondary standards.
+The primary standard system is described in the <a
+href="http://adsabs.harvard.edu/abs/2002AJ....123.2121S">Smith et
+al. (2002) AJ paper</a>.</dd>
+
+<dt id="profile">Profile</dt>
+
+<dd>
+<p>An azimuthally-averaged radial surface brightness profile. In the
+imaging catalogs, it is given as the average surface brightness in a
+series of annuli.  This quantity is in units of <a
+href="drXX/help/glossary.php#nanomaggie">nanomaggies</a> per square
+arcsec. The number of annuli for which there is a measurable signal is
+listed as <code>nprof</code>, the mean surface brightness is listed as
+<code>profMean</code>, and the error is listed as
+<code>profErr</code>.  This error includes both photon noise, and the
+small-scale 'bumpiness' in the counts as a function of azimuthal
+angle.</p>
+
+<p>When converting the <code>profMean</code> values to a local surface
+brightness, it is <em>not</em> the best approach to assign the mean
+surface brightness to some radius within the annulus and then linearly
+interpolate between radial bins.  Do not use smoothing
+splines, as they will not go through the points in the cumulative
+profile and thus (obviously) will not conserve flux. What
+<a href="drXX/help/glossary.php#frames_pipeline">frames pipeline</a>
+does, <em>e.g.</em>, in determining the
+<a href="drXX/help/glossary.php#mag_petro">Petrosian ratio</a>, is to fit a
+taut spline to the <em>cumulative</em> profile and then differentiate
+that spline fit, after transforming both the radii and cumulative profiles
+with asinh functions.  We recommend doing the same here.</p>
+
+<p>The annuli used are provided in the
+<a href="drXX/algorithms/magnitudes.php#photo_profile">magnitude
+algorithms page</a>.</p>
+</dd>
+
+<dt id="programname">programname</dt>
+
+<dd>A spectroscopic program name, assigned to each plate depending on
+what it was designed for. Within each survey (<code>legacy</code>,
+<code>segue1</code>, etc.) there can be multiple possible
+<code>programname</code>
+values. See <a href="drXX/spectro/spectro_basics.php">the basics of
+spectroscopic data</a>,
+the <a href="drXX/spectro/targets.php">SDSS/BOSS target flag page</a>
+for more details and links to the various program names and their
+meanings. </dd>
+
+<dt id="project_book">Project Book</dt>
+
+<dd>This document provides a description of the
+original science goals of the Sloan Digital Sky Survey, as well as the hardware and
+software designs, and was the 1996 proposal to NASA. It is <em>not</em> updated, so information within it may no
+longer be current; in particular, it does not describe the SEGUE and Supernova
+aspects of SDSS-II, and doesn't have anything to say about the science goals
+of SDSS-III. Nevertheless, it provides an excellent overview of
+the initial survey. The science content of this proposal is available
+<a href="http://www.astro.princeton.edu/PBOOK/welcome.htm">online</a>.</dd>
+
+<dt id="psField">psField file</dt>
+
+<dd>A FITS binary table with preliminary photometric calibration, as well as
+final point-spread-function fit, for a single
+<a href="drXX/help/glossary.php#field">field</a> in an imaging
+<a href="drXX/help/glossary.php#run">run</a>. Available in the
+<a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="psfMag">psfMag</dt>
+
+<dd>The PSF magnitude. See <a href="drXX/help/glossary.php#mag_psf">Magnitude, PSF</a>.</dd>
+
+<!-- QQQQQ -->
+
+<dt id="QA" class="7">Quality Assurance (QA)</dt>
+
+<dd>Generally speaking, the process by which data
+are confirmed to be of survey quality.  Each pipeline carries out QA,
+whose results are available for examination. After
+the imaging data are calibrated, they are run through a comprehensive
+set of tests (runQA) that confirm that the various photometric
+measures are consistent, and that, <em>e.g.</em>, the
+<a href="drXX/help/glossary.php#zhed">Zhed point</a> is
+well-behaved.  Overlap QA looks for consistency in the photometry and
+astrometry of objects in overlaps between adjacent
+<a href="drXX/help/glossary.php#scanline">scanlines</a> and
+<a href="drXX/help/glossary.php#stripe">stripes</a>.  Note that
+<a href="drXX/help/glossary.php#ubercal">Ubercal</a> uses those overlaps to
+confirm photometricity and to define the photometric calibration.</dd>
+
+<dt id="QA_hole">QA hole</dt>
+
+<dd>A spectroscopic target selected for quality assurance with a
+drilled hole in the respective plate.  Most QA targets are repeat objects
+on adjacent plates.</dd>
+
+<dt id="quasar" class="7">quasar</dt>
+
+<dd>The spectro1d pipeline classifies some objects as "quasars"
+(<em>e.g.</em> as labeled at the bottom of the gif plot). Objects are
+classified as quasars by the spectro1d pipeline if it detects an emission
+line wider than 1000 km/sec (full-width at half-maximum). The Early Data
+Release paper gives a more complete description of the classification process
+(but is outdated in that the EDR paper describes a selection based on a
+full-width at half-maximum of only 500 km/sec).</dd>
+
+<!-- RRRRR -->
+
+<dt id="rjce" class="10">Rayleigh-Jeans Color Excess (RJCE) Method</dt>
+
+<dd>A technique used by the <a href="drXX/irspec/targets.php">APOGEE target selection
+pipeline</a> to photometrically estimate the line-of-sight redenning to a star.
+The RJCE method is used to calculate potential targets' intrinsic near-infrared colors.
+The method is explained in detail in <a href="http://adsabs.harvard.edu/abs/2011ApJ...739...25M">
+Majewski, Zaswoski, and Nidever (2011)</a>.</dd>
+
+<dt id="reconst" class="7">Reconstructed Frame</dt>
+
+<dd>Images of SDSS fields constructed by "pasting"
+<a href="drXX/help/glossary.php#atlas_image">atlas image</a> cutouts into the
+<a href="drXX/help/glossary.php#field">field</a> and filling the rest of the
+image with simulated sky noise.</dd>
+
+<dt id="redden">Reddening</dt>
+
+<dd>See <a href="drXX/help/glossary.php#extinction">extinction</a>.</dd>
+
+<dt id="region">Region</dt>
+
+<dd>In CAS geometry software, a region is the union of <a
+href="drXX/help/glossary.php#convex">convex</a> areas.  These are concepts
+useful in understanding the detailed geometry of the survey on the
+sky. In the language of the <a
+href="drXX/help/glossary.php#mangle">mangle</a> software, a region
+mathematically equivalent to a set of spherical polygons. </dd>
+
+<dt id="rerun">Rerun</dt>
+
+<dd>A reprocessing of an imaging <a href="drXX/help/glossary.php#run">run</a>.
+The underlying imaging data are the same, but the software version and/or
+calibration are different.</dd>
+
+<dt id="resolve">Resolve</dt>
+
+<dd>The resolve algorithm assigns the <a
+href="drXX/help/glossary.php#primary">primary</a> observation of each object
+in the imaging data in regions of overlap.
+The primary observation is typically drawn from
+the best SDSS imaging that covers each region of the sky. See the <a
+href="drXX/algorithms/resolve.php">resolve algorithm documentation</a>
+for details.</dd>
+
+<dt id="run">Run</dt>
+
+<dd>A Run is a length of a <a href="drXX/help/glossary.php#strip">strip</a>
+observed in a single continuous image observing scan, bounded by lines
+of <a href="drXX/help/glossary.php#mu">&mu;</a> and <a
+href="drXX/help/glossary.php#nu">&nu;</a>.  A strip covers a great circle
+region from pole to pole; this cannot be observed in one pass. The
+fraction of a strip observed at one time (limited by observing
+conditions) is a Run. Runs can (and usually do) overlap at the
+ends. Like strips, it takes a pair of runs to fill in a length of a <a
+href="drXX/help/glossary.php#stripe">stripe</a>.  This is why you may read
+about data taken from "Runs 752/756" or some similar terminology. Each
+individual run contains 6 <a
+href="drXX/help/glossary.php#camcol">camcols</a> spanning the same range of
+&nu;, but not delimited by <a href="drXX/help/glossary.php#eta">&eta;</a>. These
+run pairs might not have the same starting and ending <a
+href="drXX/help/glossary.php#nu">&nu;</a> coordinates. See this <a
+href="drXX/imaging/imaging_basics.php">imaging basics</a> for
+details.</dd>
+
+<dt id="run2d">Run2d</dt>
+
+<dd>Reprocessing number for the spectroscopy. For a given plate and
+MJD, the underlying raw data is unchanged for different
+<code>run2d</code> values, but the software versions are different. In
+DR8 and DR9, <code>run2d</code> indicates a specific version of both the
+spectroscopic extraction and the redshift-fitting.</dd>
+
+<dt id="runprimary">Run primary</dt>
+
+<dd>The unique detection of an object within a single run. Adjacent
+fields within a <a href="drXX/help/glossary.php#run">run</a> and <a
+href="drXX/help/glossary.php#camcol">camcol</a> overlap by 128 pixels.
+In the raw data, these overlap regions are literally identical, and
+are only included to mitigate edge effects in the object detection. The
+photometric pipeline detects objects within the overlap regions, but
+the <a href="drXX/help/glossary.php#resolve">resolve algorithm</a> only
+retains a single detection as the "run primary" detection. Except in
+very rare occurrences, only run primary detections can be
+<a href="drXX/help/glossary.php#runprimary">survey primary</a>.</dd>
+
+<dt id="runs_database" class="7">Runs database</dt>
+
+<dd>A database accessible via the DR7 <a href="drXX/help/glossary.php#CAS">CAS</a>
+that contains photometric catalog parameters derived from all
+<a href="drXX/help/glossary.php#run">runs</a>, not just runs with quality
+sufficiently good to support spectroscopic targeting. The Runs database is
+designed to facilitate comparison of the same part of the sky at more than
+one epoch. In DR8 and subsequently, all runs will be in the full database, so there is no need for
+a separate runs database.</dd>
+
+<!-- SSSSS -->
+
+<dt id="SAS">SAS</dt>
+
+<dd>The Science Archive Server, which serves flat-files of SDSS-III data.
+It replaces the <a href="drXX/help/glossary.php#das">Data Archive Server (DAS)</a>,
+which was used in SDSS-I/II.</dd>
+
+<dt id="scanline">Scanline</dt>
+
+<dd>A subdivision of a <a href="drXX/help/glossary.php#strip">strip</a>. Each strip
+is covered by 6 "scanlines".  Scanlines are defined in
+<a href="drXX/help/glossary.php#great_circle_coords">great circle coordinates</a>.
+The great circle coordinate system is different for each strip, and is defined
+by setting the equator of the coordinate system to be the center line of
+constant &eta; for the <a href="drXX/help/glossary.php#stripe">stripe</a> to which the
+strip belongs.  A scanline is then bounded on the top and bottom by
+lines of constant <a href="drXX/help/glossary.php#nu">&nu;</a>, with no east or
+west boundaries. Scanlines touch but don't overlap, and thus are a unique
+mapping on the sky for that stripe only.  Scanlines for different stripes
+<em>do</em> overlap. This is because the scanlines come from the camera columns,
+or <a href="drXX/help/glossary.php#camcol">camcols</a>, which have a fixed physical
+width, while the spherical coordinates converge at the poles.
+<em>Note:</em>
+The term scanline has been used interchangeably (and improperly) with
+<a href="drXX/help/glossary.php#camcol">camcol</a>.</dd>
+
+<dt id="schema">Schema</dt>
+
+<dd>The implementation of a <a href="drXX/help/glossary.php#data_model">data model</a>
+in a database.</dd>
+
+<dt id="schema_browser">Schema Browser</dt>
+
+<dd>A directory in the <a href="drXX/help/glossary.php#CAS">CAS</a> that lists all of
+the tables and views, and the names of the parameters stored in them, with
+brief descriptions.</dd>
+
+<dt id="science_archive" class="7">Science Archive</dt>
+
+<dd>Also known as the SX, this was the prior incarnation of the database
+containing the object catalogs for the SDSS (for the
+<a href="drXX/help/glossary.php#EDR">EDR</a>).</dd>
+
+<dt id="scienceprimary">Science Primary</dt>
+
+<dd>Spectra that are unique observations of a location on the sky are
+labeled as <code>sciencePrimary</code> in the CAS (called
+<code>specprimary</code> in the flatfiles on SAS). The SpecObj view of
+the SpecObjAll table includes only <code>sciencePrimary</code>
+observations. There are several criteria used to determine whether the
+sciencePrimary flag should be set to 1 for an object in the SpecObjAll
+table, described in the <a
+href="drXX/spectro/catalogs.php#unique">spectroscopic catalog
+documentation</a>. Special versions of science primary are also
+defined, which are restricted to Legacy plates (<a
+href="drXX/help/glossary.php#legacyprimary">Legacy primary</a>) and SEGUE-1
+and SEGUE-2 plates (<a href="drXX/help/glossary.php#segueprimary">SEGUE
+primary</a>).</dd>
+
+<dt id="score">Score</dt>
+
+<dd> The "score" is a numerical rating for the quality of an SDSS
+imaging field.  It ranges from 0 to 1. Its meaning is described in
+detailed in the <a href="drXX/algorithms/resolve.php">resolve
+documentation</a>, and is based on
+the <a href="drXX/algorithms/image_quality.php">imaging quality
+information</a>. </dd>
+
+<dt id="sdss">SDSS</dt>
+
+<dd>The Sloan Digital Sky Survey. The survey has proceeded in three
+phases.  SDSS-I was in operation from 2000 through 2005.  <a
+href="drXX/help/glossary.php#sdss2">SDSS-II</a> continued for the following
+three years, and <a href="drXX/help/glossary.php#sdss3">SDSS-III</a> began
+in July 2008 and will continue through 2014.</dd>
+
+<dt id="sdss2">SDSS-II</dt>
+
+<dd>
+<p>The second phase of the <a href="drXX/help/glossary.php#sdss">SDSS</a>.
+It took place from July 2005 to July 2008 and has three components:</p>
+<ol>
+<li><a href="drXX/help/glossary.php#legacy">Legacy</a>,
+completing the science goals of SDSS-I. </li>
+<li><a href="drXX/help/glossary.php#segue">SEGUE</a>,
+an imaging and spectroscopic survey of stars to study Galactic structure.</li>
+<li><a href="drXX/help/glossary.php#sn">Supernova</a>,
+repeat imaging of <a href="drXX/help/glossary.php#stripe82">Stripe 82</a>
+to search for supernovae.</li>
+</ol>
+</dd>
+
+<dt id="sdss3">SDSS-III</dt>
+
+<dd>
+<p>The third phase of the Sloan Digital Sky Survey.  It started in September
+2008, and will continue through Summer 2014.  It has four components:</p>
+<ol>
+<li><a href="drXX/help/glossary.php#segue2">SEGUE-2</a>,
+spectroscopy of 250,000 stars for study of Galactic Structure. </li>
+<li><a href="drXX/help/glossary.php#BOSS">BOSS</a>, a spectroscopic survey of
+galaxies and quasars to study large-scale clustering.</li>
+<li><a href="drXX/help/glossary.php#MARVELS">MARVELS</a>, a high-resolution
+spectroscopic survey of bright stars to look for the Doppler signature of planets, and</li>
+<li><a href="drXX/help/glossary.php#APOGEE">APOGEE</a>, a high-resolution H-band
+spectroscopic survey of mostly giant stars, in all regions of the Galaxy, to study
+their chemical composition and dynamics (radial velocities).</li>
+</ol>
+</dd>
+
+<dt id="sdss4">SDSS-IV</dt>
+
+<dd>
+The proposed fourth phase of the Sloan Digital Sky Survey.  It is
+planned to start in September
+2014, and will continue for six years. It has three components: a
+emission-line galaxy and quasar redshift survey to study baryon
+oscillations (eBOSS), a spatially-resolved spectral survey of 10,000
+nearby galaxies (MANGA), and an extension of the APOGEE survey to much
+more of the sky, including the Southern hemisphere.</dd>
+
+<dt id="sdssqa" class="7">sdssQA</dt>
+
+<dd>The SDSS Query Analyzer. A Java-based Graphical User Interface (GUI)
+that provides the functionality necessary for SDSS users to prepare and
+submit queries to the SQL server database.</dd>
+
+<dt id="sdssqt" class="7">sdssQT</dt>
+
+<dd>Obsolete. This was the SDSS Query Tool, used for the
+<a href="drXX/help/glossary.php#EDR">Early Data Release</a>. It is a Graphical
+User Interface (GUI) that provides the functionality necessary for SDSS users
+to prepare and submit queries to the Science Archive, the 'end product' of the
+SDSS, where all publicly available scientific data products are stored and
+ready for access.</dd>
+
+<dt id="secondary_patch" class="7">Secondary Patch</dt>
+
+<dd>The <a href="drXX/help/glossary.php#photo_tel">PT</a> observes a series of
+secondary patches on a given night, calibrated to the system of
+<a href="drXX/help/glossary.php#primary_standard">primary standards</a>.  These
+patches overlap the 2.5m survey <a href="drXX/help/glossary.php#stripe">stripes</a>;
+with the photometry determined for these, we can set the zeropoints
+of the 2.5m <a href="drXX/help/glossary.php#run">runs</a>.</dd>
+
+<dt id="sector">Sector</dt>
+
+<dd>A sector is basically an intersection of
+<a href="drXX/help/glossary.php#tile_region">TileRegions</a>, useful
+as a region over which the completeness of the spectroscopic survey
+can be assumed to be uniform. It is a plate wedge
+modified by intersections with overlapping
+<a href="drXX/help/glossary.php#tibound">tile boundaries</a>.
+If the <a href="drXX/help/glossary.php#tibound">TilingBoundary</a> regions
+are complex (multiple <a href="drXX/help/glossary.php#convex">convexes</a>)
+or if they are holes (isMask=1), then the resulting sector is also complex
+(a region of multiple convexes). As such, a sector is just a single convex.
+Tiling boundaries do not add any depth to the sectors; they just truncate them
+to fit in the boundary.</dd>
+
+<dt id="segment">Segment</dt>
+
+<dd>This is a piece of DR7 terminology. In DR7, a segment is a piece of
+a given <a href="drXX/help/glossary.php#frames_pipeline">frames</a> pipeline
+reduction (<a href="drXX/help/glossary.php#run">run</a>/<a
+href="drXX/help/glossary.php#run">rerun</a>/<a
+href="drXX/help/glossary.php#camcol">camcol</a>), covering a piece of a <a
+href="drXX/help/glossary.php#scanline">scanline</a>, bounded on the east
+and west by lines of constant <a href="drXX/help/glossary.php#mu">&mu;</a>.
+Because segments are defined before the <a
+href="drXX/help/glossary.php#primary">primary</a> area of a <a
+href="drXX/help/glossary.php#stripe">stripe</a>, segments can actually go
+beyond the <a href="drXX/help/glossary.php#eta">&eta;</a> limits of a <a
+href="drXX/help/glossary.php#stave">stave</a>.  Indeed, near the very end of
+a stripe (near the poles), a segment may fall completely outside a
+stave. The entire concept of a "segment" is obsolete with the DR8 and DR9
+versions of <a href="drXX/help/glossary.php#resolve">resolve</a>.</dd>
+
+<dt id="segue">SEGUE</dt>
+
+<dd>
+<p>The <a href="surveys/segue2.php">
+Sloan Extension for Galactic Understanding and Exploration</a>
+mines the stellar content of the Milky Way in order to create a
+detailed three-dimensional map of the Galaxy.
+SEGUE obtained 3500 square degrees of new imaging data, including scans at low
+Galactic latitude.  SEGUE obtained spectra of 240,000 stars in the disk and
+spheroid, revealing the age, composition and phase-space distribution of stars
+within the various Galactic components. These stellar excavations provide
+essential clues for understanding the structure,
+formation and evolution of our Galaxy.</p>
+<p>SEGUE is one of the three surveys that comprise the second phase
+<a href="drXX/help/glossary.php#sdss2">(SDSS-II)</a>
+of the <a href="drXX/help/glossary.php#sdss">Sloan Digital Sky Survey (SDSS)</a>.</p>
+</dd>
+
+<dt id="segue2">SEGUE-2</dt>
+
+<dd>An extension of the <a href="drXX/help/glossary.php#segue">SEGUE survey</a>,
+that continued during the first year of
+<a href="drXX/help/glossary.php#sdss3">SDSS-III</a>.
+It obtained spectra of another 250,000 stars.  It used the same
+spectrograph as that used in SDSS-I and SDSS-II.</dd>
+
+<dt id="segueprimary">SEGUE Primary</dt>
+
+<dd>Spectra that are unique observations of a location on the sky,
+within the full set of SEGUE-1 and SEGUE-2 plates, are
+labeled as <code>seguePrimary</code> in the CAS (called
+<code>specsegue</code> in the flatfiles on SAS).
+There are several criteria used to determine whether the
+seguePrimary flag should be set to 1 for an object in the SpecObjAll
+table, described in the <a
+href="drXX/spectro/catalogs.php#unique">spectroscopic catalog
+documentation</a>. This flag is a special version of
+the <a
+href="drXX/help/glossary.php#scienceprimary">science primary</a> flag, which
+uses all plates.</dd>
+
+<dt id="serendipity">Serendipity</dt>
+
+<dd>
+<p>An open category of targets used in SDSS-I and SDSS-II whose selection
+criteria explore different regions of parameter space. These include:</p>
+<ul>
+    <li>objects lying outside the stellar locus in color space (SERENDIP_RED, SERENDIP_BLUE, SERENDIP_DISTANT)</li>
+    <li>objects coincident with FIRST sources but fainter than the equivalent in quasar target selection; also not restricted to point sources (SERENDIP_FIRST)</li>
+    <li>hand-selected targets (SERENDIP_MANUAL)</li>
+</ul>
+</dd>
+
+<dt id="ssc">Serial Stamp Collecting Pipeline (SSC)</dt>
+
+<dd>The first stage of the
+<a href="drXX/help/glossary.php#photo">Photometric pipeline</a>.
+It collects for further analysis the atlas
+images of stars to be used in astrometric calibration and PSF
+determination.</dd>
+
+<dt id="skyserver">SkyServer</dt>
+
+<dd>The <a href="http://skyserver.sdss3.org/">public outreach website</a> for
+distribution of SDSS data. Includes tools to get images, spectra, and catalog
+info, as well as educational and fun materials.</dd>
+
+<dt id="sky_targets" class="10">Sky Targets </dt>
+
+<dd>Empty regions of sky observed on each spectroscopic plate in order
+to remove the atmospheric airglow lines and underlying sky background
+from observed spectra.  In the SDSS Legacy survey, 5% of fibers (32
+fibers per plate were devoted to sky.  In BOSS, there are at least 80
+sky fibers (8%) per plate, and in APOGEE, 35 sky
+fibers are assigned to each plate.</dd>
+
+<dt id="skyversion">Sky Version</dt>
+
+<dd>The SkyVersion is a numerical designator that distinguishes what
+set of runs and reruns are being used to define the catalog.  In
+the DR9 data, the <code>skyVersion</code> is 2, which means
+<a href="drXX/help/glossary.php#rerun">rerun</a> 301 is used.  In the DR7
+data, <code>skyVersion=0</code> referred to the targeting version of
+the photometry used for Legacy, while
+<code>skyVersion=1</code> referred to the final, best version of
+the photometric reductions and calibrations for DR7.</dd>
+
+<dt id="sloan_foundation">Alfred P. Sloan Foundation</dt>
+
+<dd>A philanthropic nonprofit institution (www.sloan.org) established in 1934
+by Alfred Pritchard Sloan, Jr., then President and Chief Executive Officer of
+the General Motors Corporation. An early award from the Sloan Foundation was
+recognized by naming the survey the Sloan Digital Sky Survey. The Sloan
+Foundation has continued to be a major supporter of all three phases of the SDSS.</dd>
+
+<dt id="small_circle">Small Circle</dt>
+
+<dd>A section of a sphere which does not contain a diameter of the sphere.
+Lines of constant latitude are small circles.</dd>
+
+<dt id="sos">Son-of-Spectro</dt>
+
+<dd>A pared-down version of the software that analyzes the raw spectroscopic data
+from SDSS-I/II, as well as SEGUE-2 and BOSS.  It runs on the
+mountain, and gives feedback to the observers about the signal-to-noise ratio
+of each spectroscopic exposure and any possible problems in the data.</dd>
+
+<dt id="sop" class="7">SOP (spectroscopic observing program)</dt>
+
+<dd>This is the program which
+operates the spectrographs, including guiding the telescope and
+controlling the calibrations.</dd>
+
+<dt id="stripe82">Southern Survey and Stripe 82</dt>
+
+<dd>In SDSS-I and II, three <a href="drXX/help/glossary.php#stripe">stripes</a>
+were observed (both imaging and spectroscopy).  Stripe 82, the equatorial
+stripe (stretching roughly from 21 hours to 4 hours right ascension,
+and from -1.25 degrees to +1.25 degrees declination) was imaged repeatedly,
+especially as part of the <a href="drXX/help/glossary.php#sn">Supernova</a> survey.
+These data have been used for variability studies, as well as a
+<a href="drXX/help/glossary.php#stripe_82_coadd">deep coaddition</a>. Stripe 82
+was also the target of a wide variety of ancillary spectroscopic observations,
+as described in the
+<a href="http://adsabs.harvard.edu/abs/2006ApJS..162...38A">DR4</a> paper.
+The <a href="drXX/help/glossary.php#BOSS">BOSS</a> survey also carried
+out extensive spectroscopic observations on Stripe 82.  BOSS has carried
+out contiguous imaging of 3100 deg<sup>2</sup> in the Southern Galactic Cap.</dd>
+
+<dt id="southern_survey">Southern Survey</dt>
+
+<dd>See <a href="drXX/help/glossary.php#stripe82">Southern Survey and Stripe 82</a></dd>
+
+<dt id="specclass" class="7">specClass</dt>
+
+<dd>A parameter in the SpecObj view that indicates the best-matching
+spectroscopic template. For example, if SpecClass = 1, then the best-matching
+template was of some kind of star. Similarly SpecClass = 2
+means galaxy and SpecClass = 3 or 4 means quasar.</dd>
+
+<dt id="spectro1d" class="7">Spec1D</dt>
+
+<dd>
+<p>The second half of the spectroscopic pipeline, also known as Spectro 1D, which
+classifies the spectra and
+performs various analyses on them, including obtaining the
+redshifts. The operational goals of the 1D SPECTRO pipeline are:</p>
+<ol>
+<li>To fit the continuum of the spectrum.</li>
+<li>To determine an emission-line redshift and identify all detected emission
+lines.  A flag will also be set to identify any expected emission
+lines (on the basis of the spectral classification) which were not seen.</li>
+<li>To classify the spectrum by cross-correlating with a set of
+template spectra ranging from
+stars to quasars.  A principal component
+analysis similar to that of Connolly et al. (1995)
+has also been implemented - see
+<a href="drXX/algorithms/redshifts.php">galaxy spectral classification details</a>.</li>
+<li>To cross-correlate the spectrum with the a set of templates and
+obtain redshifts (<a href="drXX/algorithms/redshifts.php">Details here</a>).</li>
+<li>To fit a set of emission/absorption lines as a Gaussian (<a href="./algorithms/speclinefits.html">Details here</a>).</li>
+<li>To measure the velocity dispersion of galaxies (<a href="drXX/algorithms/redshifts.php#veldisp">Details here</a>).</li>
+<li>To measure various absorption line indices, as outlined in the
+<a href="http://adsabs.harvard.edu/abs/2002AJ....123..485S">EDR AJ paper</a>.</li>
+</ol>
+</dd>
+
+<dt id="specbs">SpecBS</dt>
+
+<dd>See <a href="drXX/help/glossary.php#idlspec2d">idlspec2d</a>.</dd>
+
+<dt id="special_targets" class="10">Special Targets</dt>
+
+<dd>Science targets selected by APOGEE with criteria other than the nominal
+quality, color, and magnitude criteria outlined in <a href="drXX/irspec/targets.php">APOGEE
+Target Selection</a>. Examples include known calibration cluster members and
+<a href="drXX/algorithms/ancillary/apogee/index.php">Ancillary Targets</a>.</dd>
+
+<dt id="spec2d">Spectro-2D</dt>
+
+<dd>See <a href="drXX/help/glossary.php#idlspec2d">idlspec2d</a>.</dd>
+
+<dt id="spec1d">Spectro-1D</dt>
+
+<dd>See <a href="drXX/help/glossary.php#idlspec2d">idlspec2d</a>.</dd>
+
+<dt id="specobj">SpecObjID</dt>
+
+<dd>
+<p>A unique bit-encoded 64-bit ID used for optical spectroscopic
+objects. (APOGEE targets are assigned an "apogee_id" ID).  It is
+generated from <a href="drXX/help/glossary.php#plate">plateid</a>, <a
+href="drXX/help/glossary.php#mjd">mjd</a>,  and
+<a href="drXX/help/glossary.php#fiber">fiberid</a>. It is completely independent of
+any photometric enumeration system.  It needs to be cast as unsigned
+64-bit, though in many files we waste a few bytes and write it as an
+string to avoid FITS compliance issues.</p>
+
+<p>The bits are assigned in SpecObjID as follows:</p>
+<ul>
+<li> <b>50-63</b>: plate id number (14 bits)</li>
+<li> <b>38-49</b>: fiber id number (12 bits)</li>
+<li> <b>24-37</b>: MJD (date) of plugging minus 50000 (14 bits)</li>
+<li> <b>10-23</b>: "run2d" rerun number of pipeline reduction (14 bits)</li>
+<li> <b>0-9</b>: all 0 (10 bits)</li>
+</ul>
+
+<p>Note that even though the effective "run2d" value for many plates
+are the same as in DR7, this definition of specObjID is different than
+that in DR7.</p>
+
+<p><code>run2d</code> can be an integer, like 26, or a string of the
+form 'vN_M_P', where N, M and P are integers, with the restriction
+5&le;N&le;6, 0&le;M&le;99, and 0&le;P&le;99. This is understood to be the
+<code>run2d</code> value for a spectrum. In the latter case, the 14
+bits corresponding to <code>run2d</code> are filled with
+<code>(N-5)*10000+M*100+P</code>.</p>
+
+<p>In the CAS, there is a database function
+<a href="http://skyserver.sdss3.org/dr9/en/help/browser/browser.asp?n=fSpecidFromSDSS&amp;t=F">fSpecIdFromSDSS()</a>
+which will convert PLATE, MJD, FIBER into a properly formatted specObjID.</p>
+</dd>
+
+<dt id="special_plates">Special Plates</dt>
+
+<dd>Special plates obtain spectra beyond the SDSS-I/II main survey targets,
+according to a variety of schemes for selecting targets. Many of the special
+plates were targeted along <a href="drXX/help/glossary.php#stripe82">Stripe 82</a>.
+A list of the types of special programs, and a description of the
+targeting schemes, is given
+in the <a href="drXX/algorithms/special_target.php">special target
+algorithms</a> pages.</dd>
+
+<dt id="spectrograph">Spectrograph</dt>
+
+<dd>The instrument used to obtain spectra of objects. SDSS-I/II used two
+identical spectrographs, each receiving as input 320 of the
+<a href="drXX/help/glossary.php#fiber">fibers</a> from a
+<a href="drXX/help/glossary.php#plate">plate</a>. This spectrograph was used for
+<a href="drXX/help/glossary.php#segue2">SEGUE-2</a>, and then
+was substantially upgraded for <a href="drXX/help/glossary.php#BOSS">BOSS</a>,
+to receive 500 fibers each, and to increase
+throughput.  The <a href="drXX/help/glossary.php#MARVELS">MARVELS</a> and
+<a href="drXX/help/glossary.php#APOGEE">APOGEE</a> projects each have their
+own specialized spectrographs. Details about all the instruments
+can be found on the
+<a href="instruments">instruments page</a>.</dd>
+
+<dt id="spectrophotometry">Spectrophotometry</dt>
+
+<dd>The procedure for absolute flux calibration of spectra. Please see the
+<a href="drXX/algorithms/spectrophotometry.php">Spectrophotometry</a>
+section of the <a href="drXX/algorithms/">algorithms pages</a> for an
+extensive description.</dd>
+
+<dt id="sppLines">sppLines</dt>
+
+<dd>The CAS table containing stellar line indices measured by the
+<a href="drXX/help/glossary.php#SSPP">SEGUE Stellar Parameter Pipeline (SSPP)</a>.
+These quantities are indexed on the 'specObjID' key index parameter for
+queries joining to other tables such as specobjall and photoobjall.</dd>
+
+<dt id="sppParams">sppParams</dt>
+
+<dd>The CAS table containing the outputs of the
+<a href="drXX/help/glossary.php#SSPP">SEGUE Stellar Parameter Pipeline (SSPP)</a>,
+including metallicities, gravity, and effective temperature.
+These outputs are indexed on the 'specObjID' key index parameter for
+queries joining to other tables such as specobjall and photoobjall.</dd>
+
+<dt id="spPlate">spPlate file</dt>
+
+<dd>A FITS image containing the wavelength- and flux-calibrated combined
+spectrum over all exposures (potentially spanning multiple nights) for a
+given mapped <a href="drXX/help/glossary.php#plate">plate</a>. Output as part of
+<a href="drXX/help/glossary.php#spec2d">spec2d</a>, it does <em>not</em>
+contain redshift information. Available in the
+<a href="drXX/help/glossary.php#SAS">SAS</a>.</dd>
+
+<dt id="spSpec" class="7">spSpec file</dt>
+
+<dd>A FITS image containing the line measurements and redshift determinations,
+as well as the 1-d spectrum, for a single object, summing over all of its
+exposures through a given mapped <a href="drXX/help/glossary.php#plate">plate</a>.
+Available in the <a href="drXX/help/glossary.php#DAS">DAS</a>.</dd>
+
+<dt id="sql">SQL</dt>
+
+<dd>The <em>Structured Query Language</em>, a standard means of asking for data from
+databases. For more, see our <a
+href="http://skyserver.sdss3.org/dr9/en/help/docs/sql_help.asp">SQL help
+page</a>.</dd>
+
+<dt id="SSPP">SSPP</dt>
+
+<dd>The <a href="drXX/spectro/sspp.php">SEGUE Stellar Parameter Pipeline</a>,
+is the union of a set of techniques gathered together in one
+set of pipeline for measuring common stellar atmospheric parameters
+(namely metallicity, effective temperature and surface gravity) for
+stars based on medium resolution (R ~ 2000) spectra of the stars,
+combined with accurate stellar photometry.  This pipeline yields Teff,
+[Fe/H] ([M/H]), and log g measurements
+for all stars of sufficient S/N (generally better than 10 or 15 for bluer
+stars).  The results are available in the CAS in the sppParams table.</dd>
+
+<dt id="stave">Stave</dt>
+
+<dd>A unique region of sky, bounded by two lines of constant
+<a href="drXX/help/glossary.php#eta">&eta;</a>. A stave is a portion of a
+<a href="drXX/help/glossary.php#stripe">stripe</a> that is tapered near the poles
+so that it does not overlap with the neighboring stave. This term is used
+analogously to the meaning of stave in barrelmaking.</dd>
+
+<dt id="stokes">Stokes Parameters</dt>
+
+<dd>
+<p>These quantities are related to object ellipticities.  Define the
+flux-weighted second moments of the object as:</p>
+
+<p>M<sub>xx</sub> = &lt;x<sup>2</sup>/r<sup>2</sup>&gt; ,
+M<sub>yy</sub> = &lt;y<sup>2</sup>/r<sup>2</sup>&gt; ,
+M<sub>xy</sub> = &lt;xy/r<sup>2</sup>&gt;</p>
+
+<p>In the case that the object's isophotes are self-similar ellipses, one can show that:</p>
+
+<p>Q = M<sub>xx</sub>-M<sub>yy</sub> = [(a-b)/(a+b)] &times; cos 2 φ<br />
+U = M<sub>xy</sub> = [(a-b)/(a+b)] &times; sin 2 φ</p>
+
+<p>where a and b are the semimajor and semiminor axes and &phi; is the position
+angle. Q and U are <code>Q</code> and <code>U</code> in the table
+<code>PhotoObj</code> and are referred to as "Stokes parameters." They can be
+used to reconstruct the axis ratio and position angle, measured relative to
+row and column of the CCDs. This is equivalent to the normal definition of
+position angle (east of north), for the scans on the equator. The performance
+of the Stokes parameters are not ideal at low signal-to-noise ratio, in which
+case the <a href="drXX/help/glossary.php#adaptive_moment">adaptive moments</a> will
+be more useful.</p>
+</dd>
+
+<dt id="strip">Strip</dt>
+
+<dd>A strip is a scan along a line of constant survey latitude <a
+href="drXX/help/glossary.php#eta">&eta;</a>. The center of a stripe is set at a given &eta;;
+centers of strips have a <a href="drXX/help/glossary.php#boresight">boresight</a> offset
+added. Because the columns of CCDs have gaps between them, it is
+necessary to take two offset but overlapping observations to fill in a
+<a href="drXX/help/glossary.php#stripe">stripe</a>. These two scans are called
+strips, one North and one South. Note
+that while strips are centered on a given &eta;, they are not bound by
+&eta; lines. Thus they are rectangular regions and can overlap at the
+poles.
+</dd>
+
+<dt id="stripe">Stripe</dt>
+
+<dd>Stripes are the sum of two strips, defined in <a
+href="drXX/help/glossary.php#survey_coords">survey coordinates</a> (<a
+href="drXX/help/glossary.php#lambda">&lambda;</a>, <a href="drXX/help/glossary.php#eta">&eta;</a>).
+A "stripe" is defined by a line of constant &eta;, bounded on the north and
+south by the edges of the two strips that make up the stripe, and bounded on
+the east and west by lines of constant &lambda;. Because both strips and
+stripes are defined in "observed" space, they are rectangular areas
+which overlap as one approaches the poles.
+<b>NOTE</b>: You may see the term stripe used to mean an area
+bounded by &eta; lines, which would be a unique part of the sky. That is
+a common use of the term, as some of the target selection
+documentation uses it that way. The proper term
+for the unique, &eta;-bound portion of a stripe is a <em><a
+href="drXX/help/glossary.php#stave">stave</a></em>.</dd>
+
+<dt id="stripe_82">Stripe 82</dt>
+
+<dd>See <a href="drXX/help/glossary.php#stripe82">Southern Survey</a>.</dd>
+
+<dt id="stripe_82_coadd">Stripe 82 coadd</dt>
+
+<dd>An SDSS data product that sums (<em>i.e.</em>, co-adds) individual pixels
+from the photometric sections of runs on Stripe 82. There are two coadds: one
+for the North strip and one for the South strip. These co-added runs were
+processed via the photometric pipeline to produce catalog values for
+objects that go much deeper than the individual runs. Thus "Stripe 82 coadd"
+can also refer to the catalog values as well as to the pixels.  The coadd is
+available through the DR7 CAS.</dd>
+
+<dt id="stripe_82_database">Stripe 82 database</dt>
+
+<dd>The Stripe 82 database, accessible via the DR7
+<a href="drXX/help/glossary.php#CAS">CAS</a>, includes the Stripe 82 coadds
+as well as all runs ever obtained on Stripe 82. Runs obtained earlier than
+2004 were in photometric conditions and were part of the Southern Survey. More
+recent runs were for the Supernova Survey and have a faster cadence, but were
+often obtained in non-photometric conditions, or with Moon, or with poor
+seeing. All of the runs have been calibrated in a uniform way, although the
+non-photometric runs will of course have larger errors. The DR9 and DR10
+releases do not separately distribute this data.</dd>
+
+<dt id="sn">Supernova</dt>
+
+<dd>One of the three surveys that comprised the second phase
+<a href="drXX/help/glossary.php#sdss2">(SDSS-II)</a>
+of the <a href="drXX/help/glossary.php#sdss">Sloan Digital Sky Survey (SDSS)</a>.
+It featured repeated imaging of <a href="drXX/help/glossary.php#stripe82">Stripe 82</a>
+to find these remnants of gigantic explosions from dying stars, together with
+detailed spectroscopic and photometric followup to get redshifts and
+lightcurves.  The survey discovered almost 500 confirmed Type 1a
+supernovae with redshifts up to about 0.4.  Their light curves allow
+determination of their distances, making them useful to map the rate of
+expansion of the universe, and thus
+quantify the properties of cosmological dark energy.</dd>
+
+
+<dt id="supernova_campaign" class="7">Supernova Campaign</dt>
+
+<dd>One of the three observing seasons for the Supernova survey, namely
+September through November of 2005, 2006, and 2007.  Some test data were also
+obtained in Fall of 2004.</dd>
+
+<dt id="supernova_stripe" class="7">Supernova Stripe</dt>
+
+<dd>Stripe 82, the celestial equatorial stripe that is visible in the
+Fall and observed in each Supernova campaign. (In practice the Supernova data
+extend slightly beyond the formal definition
+of Stripe 82, comprising in total 120 degrees from RA = 20h to RA = 4h.)</dd>
+
+<dt id="surface_brightness">Surface Brightness</dt>
+
+<dd>
+<p>The <a href="drXX/help/glossary.php#frames_pipeline">frames pipeline</a> also
+reports the radii containing 50% and 90% of the
+<a href="drXX/help/glossary.php#mag_petro">Petrosian flux</a> for
+each band, <code>petroR50</code> and <code>petroR90</code> respectively.
+The usual characterization of surface-brightness in the target selection
+pipeline of the SDSS is the mean surface brightness within petroR50.</p>
+
+<p>It turns out that the ratio of petroR50 to petroR90, the so-called
+"inverse concentration index", is correlated with morphology
+(Shimasaku et al. 2001, Strateva et al. 2001). Galaxies with a
+de&nbsp;Vaucouleurs profile have an inverse concentration index of around
+0.3; exponential galaxies have an inverse concentration index of around 0.43.
+Thus, this parameter can be used as a simple morphological classifier.</p>
+
+<p>An important caveat when using these quantities is that they are not
+corrected for seeing. This causes the surface brightness to be underestimated,
+and the inverse concentration index to be overestimated, for objects of size
+comparable to the PSF.</p>
+</dd>
+
+<dt id="surveybest">Survey Best</dt>
+
+<dd>The best imaging observation of an object with multiple
+observations is called the <a
+href="drXX/help/glossary.php#surveyprimary">survey primary object</a>, and
+other observations of primary objects are <a
+href="drXX/help/glossary.php#surveysecondary">survey secondary</a>.
+However, occasionally there are objects detected in areas which are
+not detected in the primary area of any field; these are typically
+low signal-to-noise ratio or transient objects. These are called
+"survey best".</dd>
+
+<dt id="survey_coords">Survey Coordinates</dt>
+
+<dd>One of the main coordinate systems used by the
+survey, with coordinates <a href="drXX/help/glossary.php#eta">&eta;</a> and
+<a href="drXX/help/glossary.php#lambda">&lambda;</a>. This is a spherical coordinate system,
+where (&eta;,&lambda;)=(0,90.) corresponds to (ra,dec)=(275.,0.) and (&eta;,&lambda;)=(57.5,0.)
+corresponds to (ra,dec)=(0.,90.). Note also that at (&eta;, &lambda;)=(0.,0.),
+(ra,dec)=(185.,32.5). So, this is a pure rotation of the usual RA/Dec system,
+as opposed to the <a href="drXX/help/glossary.php#great_circle_coords">great circle system</a>,
+which is defined relative to each individual <a href="drXX/help/glossary.php#stripe">stripe</a>.
+For some reason, although "&eta;" is constant along great
+circles, it is referred to as "survey latitude," while "&lambda;" is referred to
+ as "survey longitude." Also, "&eta; runs only from -90. to 90.; the back of
+the sphere is covered by "&lambda;", which runs from -180. to 180. The Survey
+coordinates are defined such that the "primary" area of a
+<a href="drXX/help/glossary.php#stripe">stripe</a> (otherwise known as a
+<a href="drXX/help/glossary.php#stave">stave</a>) in the north
+is defined by a rectangle in Survey coordinates which is 2.5 degrees wide in
+&eta; (coordinate width). See the algorithms page for <a
+href="drXX/algorithms/surveycoords.php">SDSS survey coordinates</a>.</dd>
+<!--  You may be interested in SM routines which convert  -->
+<!--  between Equatorial, Survey, and Great Circle coordinates, but we won't -->
+<!--  tell you where you get them.XXX -->
+
+<dt id="survey_equator">Survey Equator</dt>
+
+<dd>The great circle perpendicular to the
+<a href="drXX/help/glossary.php#central_meridian">central meridian</a>,
+passing through the survey center at &delta; = 32.8&deg; is the survey equator.</dd>
+
+<dt id="survey_poles">Survey Poles</dt>
+
+<dd>The locations of the poles in the
+<a href="drXX/help/glossary.php#survey_coords">survey coordinate system</a>. Due to
+the unusual nature of this system, there is an east pole and a west one,
+at &delta; = 0 , &alpha; = 18h&nbsp;20m and 6h&nbsp;20m.</dd>
+
+<dt id="sx" class="7">SX</dt>
+
+<dd>An abbreviation for the old
+<a href="drXX/help/glossary.php#science_archive">Science Archive</a>. This was the prior
+incarnation of the database containing the object catalogs. It was based on
+<a href="drXX/help/glossary.php#objectivity">Objectivity</a> software.</dd>
+
+<dt id="surveyprimary">Survey Primary</dt>
+
+<dd>The 'main' photometric observation of an object. Because many of
+the survey <a href="drXX/help/glossary.php#run">runs</a> overlap, an object
+may be observed two or more times. Only one observation is chosen as
+the 'primary' observation of the object, during the <a
+href="drXX/algorithms/resolve.php">resolve</a> process. Also note that
+during this process each area of the sky is assigned a <a
+href="drXX/help/glossary.php#field">field</a> which is primary in that area,
+and all primary observations in that area must come from the primary
+field. Except in extremely rare occasions, survey primary detections
+must also be <a href="drXX/help/glossary.php#runprimary">run primary</a>.</dd>
+
+<dt id="surveysecondary">Survey Secondary</dt>
+
+<dd>The best imaging observation of an object with multiple
+observations is called the <a
+href="drXX/help/glossary.php#surveyprimary">survey primary object</a>, and
+other observations are stored in the PhotoObjAll table and PhotoObj
+view as survey secondary objects.</dd>
+
+<!-- TTTTT -->
+
+<dt id="table">Table</dt>
+
+<dd>A specific set of objects and their measured quantities stored in a database.</dd>
+
+<dt id="tai">TAI</dt>
+
+<dd>TAI is the time given in units of seconds, and is determined at
+<a href="drXX/help/glossary.php#apo">APO</a> using GPS-based NTP servers.
+To get the TAI time in <a href="drXX/help/glossary.php#mjd">Modified Julian Date</a>
+ format, use MJD = TAI/(24*3600).
+In practice at <a href="drXX/help/glossary.php#apo">APO</a>, there are several definition of MJD that can
+differ by of order seconds; when TAI is available it is the more
+reliable time source.</dd>
+
+<dt id="target">Target</dt>
+
+<dd>In DR9, an object selected as a candidate for spectroscopy (which has
+not necessarily ever received a fiber).</dd>
+
+<dt id="target_selection">target selection</dt>
+
+<dd>A general term used to describe how objects are selected for
+spectroscopic observation.</dd>
+
+<dt id="targeting_flag_and_bits">Targeting Flag and Bits</dt>
+
+<dd>A <a href="drXX/glossary.php#flag">flag</a> (bitmask value) encoding
+information about how an object was targeted for spectroscopic
+follow-up observation.</dd>
+
+<dt id="tdi">TDI</dt>
+
+<dd>The SDSS imaging data are taken in time-delay-and-integrate (TDI) mode at
+the sidereal rate almost simultaneously in five bands. The sky tracks through
+5 CCD detectors in succession, each located behind a different filter. See
+<a href="images/camassy2.gif">this image</a> to get a better idea.</dd>
+
+<dt id="telluric_standard" class="10">Telluric Standard</dt>
+
+<dd>Blue (hot) stars observed by APOGEE on each plate to correct for
+telluric absorption lines present in the spectra for each
+<a href="drXX/help/glossary.php#visit">visit</a>.  Similar telluric
+standards were observed as part of SDSS and BOSS optical spectroscopy.</dd>
+
+<dt id="visit" class="10">Visit (APOGEE)</dt>
+
+<dd>APOGEE's base unit of observation, equivalent to approximately one hour of
+on-sky integration. Repeated visits are used to used both to build up signal
+and to provide a measure of radial velocity stability (e.g. for the detection
+of stellar companions).</dd>
+
+<dt id="thingid">thingId</dt>
+
+<dd>Each unique source in the SDSS catalog is identified by a
+<code>thingId</code>. Each source may have been observed more than
+once in multiple <a href="drXX/help/glossary.php#run">run</a>s, and might
+therefore have multiple detections listed in the catalog. Only one
+detection is considered <a
+href="drXX/help/glossary.php#primary">primary</a>. The <a
+href="drXX/algorithms/resolve.php">resolve</a> algorithm documentation
+explains these differences in full.</dd>
+
+<dt id="tilable">Tilable Target</dt>
+
+<dd>Specific to the Legacy survey. These are spectroscopic <a
+href="drXX/help/glossary.php#target">target</a>s which are assigned to <a
+href="drXX/help/glossary.php#tile">tile</a>s by <a
+href="drXX/help/glossary.php#tiling">tiling</a>. The significance of this is
+that tilable targets are supposed to have as close to uniform
+completeness as possible and it should be possible to define
+well-defined samples of such targets. The bitmasks <code>primTarget</code>
+and <code>secTarget</code> described in <a
+href="drXX/algorithms/target_selection.php">the description of the target
+selection</a> contain the target assignments of each <a
+href="drXX/help/glossary.php#object"> object</a>.  Tilable targets for the
+SDSS-I/II <a href="drXX/help/glossary.php#legacy">Legacy</a> survey are
+those with the <code>primTarget</code> flags QSO_HIZ, QSO_CAP, QSO_SKIRT,
+QSO_FIRST_CAP, QSO_FIRST_SKIRT, GALAXY_RED, GALAXY, GALAXY_BIG,
+GALAXY_BRIGHT_CORE, or STAR_BROWN_DWARF, and those with the
+<code>secTarget</code> flag HOT_STD.</dd>
+
+<dt id="tile">Tile</dt>
+
+<dd>A 1.49&deg; radius circle on the sky determined by
+<a href="drXX/help/glossary.php#tiling">tiling</a> and which contains the locations
+of up to 592 <a href="drXX/help/glossary.php#tilable">tilable target</a>s and other
+science targets. For each tile one or more
+<a href="drXX/help/glossary.php#plate">plate</a>s will be created. If less than the
+maximum of 592 <a href="drXX/help/glossary.php#tilable">tilable targets</a> can be
+assigned to that tile, the spare fibers are assigned to other spectroscopic
+targets. The 48 remaining <a href="drXX/help/glossary.php#fiber">fiber</a>s are
+assigned to calibration targets, including sky fibers.  These numbers are
+relevant for the <a href="drXX/help/glossary.php#legacy">Legacy Survey</a> and
+<a href="drXX/help/glossary.php#segue2">SEGUE-2</a>; for BOSS, there are 1000
+fibers in total assigned to a tile.
+<a href="drXX/help/glossary.php#APOGEE">APOGEE</a> and
+<a href="drXX/help/glossary.php#MARVELS">MARVELS</a>
+tiles have 300 and 60 fibers, respectively.</dd>
+
+<dt id="tile_region">Tiled Region</dt>
+
+<dd>TileRegion is a term used to indicate the portion of a
+<a href="drXX/help/glossary.php#tile">Tile</a> that may have
+<a href="drXX/help/glossary.php#target">targets</a>
+(<em>i.e.</em> within the union of the
+<a href="drXX/help/glossary.php#tibound">TilingBoundaries</a> for a
+<a href="drXX/help/glossary.php#tile_run">TileRun</a>
+and outside the union of the
+<a href="drXX/help/glossary.php#timask">TilingMasks</a> for the TileRun
+and the global TilingMasks). These are not necessarily convex, because of the
+TilingMasks.</dd>
+
+<dt id="tile_run">Tile Run</dt>
+
+<dd>A TileRun represents a single run of the tiling software. It is a logical
+unit of geometrical information that consists of a set of
+<a href="drXX/help/glossary.php#tibound">TilingBoundaries</a>,
+<a href="drXX/help/glossary.php#timask">TilingMasks</a>, and
+<a href="drXX/help/glossary.php#tile">Tiles</a> that are associated with
+exactly one TileRun (<em>i.e.</em>, each TilingBoundary, TilingMask, and Tile is
+associated with exactly one TileRun, with one exception that will be noted
+later). Sometimes this is also called a tiling "chunk." </dd>
+
+<dt id="tiling">Tiling</dt>
+
+<dd>The process of designing <a href="drXX/help/glossary.php#tile">tiles</a> for
+spectroscopy.</dd>
+
+<dt id="tibound">Tiling Boundary</dt>
+
+<dd>A TilingBoundary is a set of "rectangles" that defines the area of the sky
+that may be tiled in a <a href="drXX/help/glossary.php#tile_run">TileRun</a>.
+Only <a href="drXX/help/glossary.php#target">targets</a> from within the union of the
+<a href="drXX/help/glossary.php#tibound">TilingBoundaries</a> for a
+TileRun may be assigned to Tiles created during a TileRun. A single
+TilingBoundary must be contained within a single chunk.</dd>
+
+<dt id="timask">Tiling Mask</dt>
+
+<dd>TilingMasks are "rectangles" that should not be considered part of the
+tileable area during a <a href="drXX/help/glossary.php#tile_run">TileRun</a>.</dd>
+
+<dt id="tpm">TPM</dt>
+
+<dd>Telescope Performance Monitor. Software that reports on the physical
+parameters of the survey telescope.</dd>
+
+<dt id="tsfield">tsField</dt>
+
+<dd>In SDSS-I/II, The tsField files are FITS binary tables containing the
+information about each imaging <a href="drXX/help/glossary.php#field">field</a>
+that is exported to the Field tables in the
+<a href="drXX/help/glossary.php#CAS">CAS</a>.</dd>
+
+<dt id="tsobj">tsObj</dt>
+
+<dd>In SDSS-I/II, the tsObj files were FITS binary tables containing
+calibrated object catalogs output by the
+<a href="drXX/help/glossary.php#frames_pipeline">frames pipeline</a>, one
+per <a href="drXX/help/glossary.php#field">field</a>. In SDSS-III, they are
+replaced with the so-called PhotoObj files, which form the basis for the
+photometric data found in the PhotoObj table in
+<a href="drXX/help/glossary.php#CAS">CAS</a>.</dd>
+
+<dt id="tsobjfrommap" class="7">tsObjFromMap</dt>
+
+<dd>A <a href="drXX/help/glossary.php#tsobj">tsObj file</a> containing the
+calibrated information only for those objects which have been
+<a href="drXX/help/glossary.php#target">targeted</a>. Available in the
+<a href="drXX/help/glossary.php#DAS">DAS</a>.</dd>
+
+<dt id="type">Type</dt>
+
+<dd>Also known as <code>PhotoType</code> or <code>objc_type</code>,
+which distinguishes stars (type=6) and galaxies (type=3) based on
+their morphology. It is quantified on the basis of the difference
+between the PSF and model magnitudes. </dd>
+
+<!-- UUUUU -->
+
+<dt id="ubercal">Ubercal</dt>
+
+<dd>Ubercal is the method used to photometrically calibrate the SDSS imaging survey,
+using overlap between scans to solve for zeropoints and extinction for each camera-column
+for each run.  It makes heavy use of overlapping 'crossing scans',
+which run at an oblique angle to the standard survey stripes and
+yield multiple detections of the same stars in different camera columns.  The method is
+described in detail in <a href="http://adsabs.harvard.edu/abs/2008ApJ...674.1217P">Padmanabhan et al. (2008)</a>.</dd>
+
+<dt id="ucac">UCAC</dt>
+
+<dd> The US Naval Observatory CCD Astrograph Catalog, a dense grid of astrometric
+standards over the sky off of which the SDSS imaging scans are calibrated.</dd>
+
+<!-- VVVVV -->
+
+<dt id="view">View</dt>
+
+<dd>In a database, a way of looking at a subset of the data in a given
+<a href="drXX/help/glossary.php#table">Table</a>. Views are treated just like
+Tables in <a href="drXX/help/glossary.php#sql">SQL</a> queries. For example,
+in the <a href="drXX/help/glossary.php#CAS">CAS</a>, the Galaxy view shows only
+the subset of the PhotoObj table that are morphologically classified as
+galaxies.</dd>
+
+<!-- WWWWW -->
+
+<dt id="washington_ddo51" class="10">Washington+DDO51</dt>
+
+<dd>The abbreviation used by APOGEE for the combination of Washington <em>M</em> and
+<em>T_2</em> photometry with <em>DDO51</em> photometry, used in the classification of
+dwarf and giant stars in many halo fields.</dd>
+
+<dt id="wcs">WCS</dt>
+
+<dd>World Coordinate System. The FITS standard for defining
+astrometric calibrations in the image header.</dd>
+
+<!-- XXXXX -->
+
+<dt id="XDQSO">XDQSO</dt>
+
+<dd>The name of one of the algorithms used to select quasar candidates
+for spectroscopy in BOSS.  This algorithm currently is used for the
+<a href="drXX/help/glossary.php#CORE">CORE</a> selection of quasar candidates.
+It uses the "extreme deconvolution" method of
+<a href="http://adsabs.harvard.edu/abs/2011ApJ...729..141B">Bovy et al. (2011)</a>,
+which determines the consistency of each objects with the quasar and stellar
+loci in color space, given its photometry and errors.</dd>
+
+<!-- YYYYY -->
+
+<dt id="yanny">Yanny parameter file</dt>
+
+<dd>See <a href="drXX/help/glossary.php#par_file">par file</a>.</dd>
+
+<!-- ZZZZZ -->
+
+<dt id="zconf" class="7">zConf</dt>
+
+<dd>Literally the confidence that the redshift is correct, zConf is more broadly a measure of the
+likelihood that the spectral template (and thus spectral classification and redshift) is correct.
+Except for intrinsically featureless spectra, it is generally correlated with the signal-to-noise
+ratio in the spectrum.</dd>
+
+<dt id="zhed">Zhed Point</dt>
+
+<dd>
+The stellar locus in SDSS color-color space is essentially one-dimensional.
+Various canonical positions in color-color space can be defined from bends
+in the stellar locus; we call these positions the Zhed Points.  The constancy
+of these positions (after correcting for Galactic reddening) is a very useful
+test of the uniformity of our photometry.
+</dd>
+
+<dt id="zwarning">zWarning</dt>
+
+<dd>A parameter set by the redshift-fitting code that indicates that a
+redshift or classification may be in error.  The bits are described
+<a href="drXX/algorithms/bitmask_zwarning.php">here</a>.
+</dd>
+
+<dt id="zstatus" class="7">zStatus</dt>
+
+<dd>The adopted redshift (the spectroscopic parameter z) may be determined by
+one of a number of algorithms, and it can be manually overridden in
+problematic cases. The zStatus flag encodes which method was actually used.</dd>
+
+</dl><!-- DO NOT REMOVE -->
+</body><!-- DO NOT REMOVE -->
+</html><!-- DO NOT REMOVE -->
