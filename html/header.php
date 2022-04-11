@@ -9,7 +9,7 @@ class SiteConstants {
     /** @type array Contains all the constant data. */
     private $data = array(
         'copyright' => 'Copyright &copy; 2010-2013 SDSS-III', // Common copyright string for all pages.
-        'url' => 'http://www.sdss3.org/', // The base URL of this site.
+        'url' => 'https://www.sdss3.org/', // The base URL of this site.
         'internal' => 'https://sdss3.org/internal/', // The base URL of internal pages.
         'headurl' => '$HeadURL: svn+ssh://sdss3svn@sdss3.org/repo/www/tags/v5_63/html/header.php $',
         'dr_regex' => '/dr([0-9]+)/', // Use this regular expression to match DR pages.
