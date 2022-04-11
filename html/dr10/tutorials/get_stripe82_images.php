@@ -36,7 +36,7 @@ e.g. for RUN 301, RERUN 4797, CAMCOL 1:
 </p>
 
 <ul>
-<li><a href="http://data.sdss3.org/dr10/env/BOSS_PHOTOOBJ/frames/301/4797/1/">http://data.sdss3.org/dr10/env/BOSS_PHOTOOBJ/frames/301/4797/1/</a></li>
+<li><a href="http://data.sdss3.org/sas/dr10/env/BOSS_PHOTOOBJ/frames/301/4797/1/">http://data.sdss3.org/sas/dr10/env/BOSS_PHOTOOBJ/frames/301/4797/1/</a></li>
 </ul>
 
 <p>
